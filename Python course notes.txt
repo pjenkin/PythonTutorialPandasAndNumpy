@@ -1,0 +1,212 @@
+NB remember to activate virtualenv with activate script and pip3 install from Scripts directory in terminal window from PyCharm
+
+1-3 "pip install xyz" actually working, but "python -m pip install xyz" an alternative if needed
+1-6 pycharm (Jetbrains)  Ctrl-Q - cursor docs; Alt-F7 find instances; Ctrl-space complete; Ctrl-F12 navigate structure; shift-F6 rename; Tab accept/overwrite; Ctrl-W increasing select; Alt-F1 select currently edited; Ctrl-D duplicate; Ctrl-Shift-Up/Down move line up/down; Ctrl-P valid parameter list at cursor; Ctrl-Shift-Backspace move to last edit(s); Ctrl-Shift-F7 highlight instances in file - F3/Shift-F3 move through; Ctrl-Shift-V choose clipboard copy/paste; Alt-Up/Down move between methods;  Ctrl-Alt-L reformat according to PEP8 standard; Ctrl-O override base methods; 
+Run... configuration - or use default 'main'
+pastebin.com 
+https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+
+*no* implicit conversion (string->number)
+is - boolean - initial 'T' True
+list (array) my_array = ['one','two']   my_array[0]  my_array[0:2]  (from 0 to 1)   my_array[0:] (from 0 to the end) my_array[:] (from the start to the end)  my_array[-2] (2 back from the end)     'one' in my_array     will evaulate to True  - dictionary, e.g. for value in my_array.values  or for key in my_array.keys
+dictionary - key/value (JSON-like) -   dictionary1 = {'name': 'PJ', 'age': str(45), 'hobby': 'walking'}   -  dictionary1['name']   dictionary2 = zip(array_keys,array_values) - zip function for i,j in zip(my_array1, my_array2)  - pop and push for dictionaries dictionary1.pop('name')
+def - all caps for Class Names MyClass  - for functions,   my_function(): - 4 space indentation - 
+
+def my_function():
+    print('This is in my function')
+
+my_function()
+print('This is not in a function')
+
+None keyword - * 
+
+def print_people(*people):
+    for person in people:
+        print('This person is', person)
+
+# check = False
+check = 10
+
+
+if not check:
+    print('\'tis false')
+elif check == 10:
+    print('check d\'equal 10')
+else if check:
+    print('\'tis actually true')
+else:
+    print('can never get here')
+
+import re   - import regular expression library  re.sub('[A-z]' '[a-z]', string)
+string = 'I am not YELLING, he said. However we knew that that was not true.'
+re.sub('[A-z]' '[a-z]', string)
+
+class MyClass:
+	property1 = 100
+	property2 = 'hello'
+    def __init__(self, property1, property2):
+
+	def getProperty1(self):
+		print(self.property1)
+
+mything = MyClass()
+mything.getProperty1()
+
+''' string literal to comment out large code block - docstring   https://www.pythonforbeginners.com/basics/python-docstrings  https://en.wikipedia.org/wiki/Docstring#Python  The docstring for a Python code object (a module, class, or function) is the first statement of that code object, immediately following the definition (the 'def' or 'class' statement). The docstring for the code object is available on that code object's __doc__ attribute and through the help function.
+"""The module's docstring"""
+
+class MyClass(object):
+    """The class's docstring"""
+
+    def my_method(self):
+        """The method's docstring"""
+
+
+    def __init__(self): like a constructor
+
+>>> import mymodule
+>>> help(mymodule)
+The module's docstring
+>>> help(mymodule.MyClass)
+The class's docstring
+
+
+3-33 classes, __init__.py (__init__.py to identify directory as containing package, inter alia)  -  from classes.myclass  (relative, local import)
+pprint - pretty print object
+
+
+https://pypi.org/project/colorama/     https://stackoverflow.com/a/23435273
+
+
+tolookup:
+Jupyter
+venv - virtual environment   https://realpython.com/python-virtual-environments-a-primer/   https://docs.python-guide.org/dev/virtualenvs/    https://docs.python.org/3/library/venv.html
+.idea  - project settings files - useful to share (3): indexLayout.xml (external folders) vcs.xml (version control) runconfigurations -   https://rider-support.jetbrains.com/hc/en-us/articles/207097529-What-is-the-idea-folder-  https://www.jetbrains.com/help/pycharm/project-and-ide-settings.html  https://www.jetbrains.com/help/idea/working-with-projects.html
+
+slice
+
+
+Anaconda navigator
+
+https://www.pythonanywhere.com/
+nano   - Ctrl-X   https://wiki.gentoo.org/wiki/Nano/Basics_Guide   Alt-6 copy   Ctrl-U paste  Ctrl-Shift-6 select
+python - version 2    python3 - version 3    Ctrl-D === EOF     Ctrl-L to clear  dir(my_variable) to get methods applicable to a variable   dir(__builtins__)   pow(x,y)   x ** y
+for loop    - also for i,j in 
+while 
+
+tuple - using parentheses() , not mutable so no appending or removing
+open()
+fileobject.read			.readlines     .close()
+.splitlines					a+ to write at end and make new 
+with open('fruit.txt', 'w') as myfile:
+    myfile.write('something')			- with will close file even if error in block of code 3-68
+
+import os    os module for file/path      dir(os) to see functions (introspection)    help(os)  to see explanations
+module - file in Lib/
+library - directory of py files in Lib/      __init__.py loads methods    folder.file
+package - 3rd party module/library        cf npm      pip3 install xyz    or pip3 install xyz or python3 -m install xyz  -  pip show xyz  -  help(xyz) maybe - docs at e.g. 
+pypi.python.org/pypi/glob2   - python -m site   -  pip3 install --upgrade --force-reinstall glob2
+
+in Pycharm, File/Settings/Project/Project Interpreter - in drop-down select the main interpreter (e.g. Python 3.7 C:\Users\peter.DESKTOP-3GCVT7E\AppData\Local\Programs\Python\Python37-32\python.exe) not the interpreter in the venv (e.g.Python 3.7 (beyondbasics) C:\Users\peter.DESKTOP-3GCVT7E\source\repos\Python\python mega course\beyondbasics\venv\Scripts\python.exe)  - selecting the main interpreter so will give access to packages loaded into the global Python path (e.g. C:\Users\peter.DESKTOP-3GCVT7E\AppData\Local\Programs\Python\Python37-32\Lib)  https://askubuntu.com/questions/684550/importing-a-python-module-works-from-command-line-but-not-from-pycharm  https://stackoverflow.com/a/19885882    http://python-notes.curiousefficiency.org/en/latest/python_concepts/import_traps.html  - symptom: no module found from IDE e.g. PyCharm but module found from terminal Python console.
+
+could be caused by Anaconda / conda installation interfering with Pycharm https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000639400/comments/360000120659
+
+https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/   https://packaging.python.org/guides/installing-using-pip-and-virtualenv/  - need to activate venc using /Scripts/activate.py script from command line (navigate in Pycharm , right click open in terminal and type 'activate')    (and then deactivate later)
+
+PYTHONPATH environment variable? may already be an entry in Path for User variables in System/environment variables (Windows) 
+site_packages in venv and/or Python install directories for 3rd party libs
+
+3-65 from datetime import datetime    datetime.strptime('2018:03:03:10:15', '%Y:%m:%d:%H:%M')   mytime.strftime('%Y:%m')
+
+4-78 try:
+	something()
+except ZeroDivisionError:		# ZeroDivisionError: python keyword for a particular error
+	print('an error occurred')
+
+else:
+	print('No errors')
+
+finally:
+	print('All code completed')
+
+except Exception as e:
+	raise
+
+		
+https://pyfound.blogspot.com/search/label/pypi
+https://pypi.org/search/?q=&o=-zscore&c=Programming+Language+%3A%3A+Python+%3A%3A+3
+
+5-81 import json     data = json.load(open('data.json'))
+5-85 fuzzy string matching https://www.datacamp.com/community/tutorials/fuzzy-string-python  Levenshtein distance
+import difflib            from difflib import SequenceMatcher   SequenceMatcher(None, "rainn", "rain").ratio()    from difflib import get_close_matches    
+get_close_matches('rainn', ['hope','reign','chocolate', 'rain'])   >>> ['rain', 'reign']   get_close_matches('rainn', ['hope','reign','chocolate', 'rain'], cutoff=0.8)  >>>> ['rain']   help(get_close_matches)
+
+string interpolation:
+(1) name = there; program = 'Python'; print(f'Hello {name}! This is {program}')    # https://www.programiz.com/python-programming/string-interpolation
+
+print("%s %s" %('Hello','There',))  (deprecated?)
+
+line continuation  - \ character     - parentheses also d'facilitate breaking into multiple lines  - function parameters also can be spread over multiple lines
+semicolons can be used to put several commands on 1 line, but not recommended
+5-89 print 1 list item per line https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/  -   '\n'.join(my_list)
+a=[1,2,3,4];    print('_'.join(map(str,a)))   >>> 1_2_3_4		# int in list mapped to string
+
+
+
+
+TODO decorators - http://book.pythontips.com/en/latest/decorators.html   https://en.wikipedia.org/wiki/Decorator_pattern
+TODO variadic arguments
+TODO positional argument, keyword argument
+5-89 *my_list    **my_dictionary   TODO https://codeyarns.com/2012/04/26/unpack-operator-in-python/    https://treyhunner.com/2018/10/asterisks-in-python-what-they-are-and-how-to-use-them/   splat? unpack?
+
+6-96 pandas - DataFrame to store/process structured data - pip3 install pandas - 
+In [6]: df1 = pandas.DataFrame([[2,4,6],[10,20,30]],columns = ["Mass","Age","Saturation"], index=["First","Second"])
+
+In [7]: df1
+Out[7]:
+        Mass  Age  Saturation
+First      2    4           6
+Second    10   20          30
+
+In [14]: df2=pandas.DataFrame([{"name":"John","surname":"Jones"},{"name":"Peter"}])
+
+In [15]: df2
+Out[15]:
+    name surname
+0   John   Jones
+1  Peter     NaN
+dir(df2) will show large number of methods of DataFrame
+series - 1 dimensional, labelled by 'index' (DataFrame composed of series)
+
+
+IPython -    - pip3 install ipython
+
+6-97 Jupyter notebook (can pip3 install jupyter or pip3 install notebook) - https://github.com/jupyter/notebook/issues/4467#issuecomment-471609885  - jupyter notebook    in a directory 
+new/ notebook    xz.ipynb
+H - shortcuts; Enter - new line; Ctrl+Enter - execute cell; Alt+Enter - new cell; Enter - next line; Shift+Enter - execute and move to a new cell; Esc then D,D - delete cell;
+command mode has line around cell - edit mode has cursor
+token needed for authentication if using IDE to connect to Jupyter server - from output of     jupyter notebook    command in terminal
+TODO https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/   http://maxmelnick.com/2016/04/19/python-beginner-tips-and-tricks.html 
+'No connection to kernel' - python -m ipykernel - https://github.com/ipython/ipython/issues/10346#issuecomment-282615313
+pip3 uninstall tornado    pip3 install tornado==5.1.1 https://github.com/jupyter/notebook/issues/2990#issuecomment-469750346   - tornado web server https://www.tornadoweb.org/en/stable/ - not based on WebServerGatewayInterface https://wsgi.readthedocs.io/en/latest/
+
+import pandas; df=pandas.read_csv('supermarkets.csv'); df;  dfpj=pandas.read_json('supermarkets.json'); dfpj;
+Cell/Type/Markdown to add text 
+markdown: ** bold; __underline;  _ or* italics; ~~ strikethrough; # H1; ##H2; ` codeblock; ``` multi-line codeblock; [link text](http://tosomeurl.net); ![image alt text](http://someurl.net/someimageurl.jpg)
+
+6-101 pip3 install xlrd - for excel files
+
+
+6-98 import os; os.listdir()
+
+
+
+=======================================
+NB remember to activate virtualenv with activate script and pip3 install from Scripts directory in terminal window from PyCharm
+
+monotonous (little change in pitch, words run together)
+vowel sounds similar
+
+panDas (pannas)
+ahEAd (ahud)
+commAnd (commond)
