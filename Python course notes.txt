@@ -1,6 +1,6 @@
 NB remember to activate virtualenv with activate script and pip3 install from Scripts directory in terminal window from PyCharm
 
-1-3 "pip install xyz" actually working, but "python -m pip install xyz" an alternative if needed
+1-3 "pip install xyz" actually working, but "python -m pip install xyz" an alternative if needed - wheel files with pip https://stackoverflow.com/q/27885397 https://pip.pypa.io/en/stable/reference/pip_wheel/
 1-6 pycharm (Jetbrains)  Ctrl-Q - cursor docs; Alt-F7 find instances; Ctrl-space complete; Ctrl-F12 navigate structure; shift-F6 rename; Tab accept/overwrite; Ctrl-W increasing select; Alt-F1 select currently edited; Ctrl-D duplicate; Ctrl-Shift-Up/Down move line up/down; Ctrl-P valid parameter list at cursor; Ctrl-Shift-Backspace move to last edit(s); Ctrl-Shift-F7 highlight instances in file - F3/Shift-F3 move through; Ctrl-Shift-V choose clipboard copy/paste; Alt-Up/Down move between methods;  Ctrl-Alt-L reformat according to PEP8 standard; Ctrl-O override base methods; 
 Run... configuration - or use default 'main'
 pastebin.com 
@@ -240,6 +240,12 @@ TODO: Mac Certifi for SSL https://www.udemy.com/the-python-mega-course/learn/v4/
 
 dftext2['Latitude'] = dftext2['Coordinates'].apply(lambda x: x.latitude if x != None else None); dftext2;   # unpack Location object from Coordinates field using lambda expression
 ditto for longitude
+
+7-112 Numpy (as for arrays and image matrices)
+n = numpy.arange(10) will fill 0-9 in a numpy.ndarray (n-dimensional array) as ascertained from type(ar)
+n.reshape(3,9) into 2-D array of 3 rows of 9 elements
+Python list is different from numpy array
+pip3 install opencv-python  #globally, not in venv, so as to work with Jupyter Notebook
 
 
 
