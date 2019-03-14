@@ -245,8 +245,35 @@ ditto for longitude
 n = numpy.arange(10) will fill 0-9 in a numpy.ndarray (n-dimensional array) as ascertained from type(ar)
 n.reshape(3,9) into 2-D array of 3 rows of 9 elements
 Python list is different from numpy array
-pip3 install opencv-python  #globally, not in venv, so as to work with Jupyter Notebook
+pip3 install opencv-python  #globally, not in venv, so as to work with Jupyter Notebook NB opencv == cv2 (in Python)
+7-114 im_g = cv2.imread('smallgrey.png', 0) # 0: greyscale 1: RBG
+array([[187, 158, 104, 121, 143],
+       [198, 125, 255, 255, 147],
+       [209, 134, 255,  97, 182]], dtype=uint8)
+im_g = cv2.imread('smallgrey.png', 0) # 0: greyscale 1: RGB/BGR (bands)
+cv2.imwrite('newsmallgrey.png',im_g)
+7-115 
+for i in im_g: # iterate through rows of 2-d numpy array using 'for'
+    print(i)
+for i in im_g.T: # iterate through columns of (transposed) 2-d numpy array using 'for'
+    print(i)
+for i in im_g.flat: will run through individual elements of n-d array row by row
+7-116  e.g. ims = numpy.hstack((im_g,numpy.array([[1,2,3],[1,2,3],[1,2,3]])))  # horizontal stack using tuple
+array([[187, 158, 104, 121, 143,   1,   2,   3],
+       [198, 125, 255, 255, 147,   1,   2,   3],
+       [209, 134, 255,  97, 182,   1,   2,   3]])
 
+e.g. ims = numpy.vstack((im_g,numpy.array([[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]])))  # vertical stack using tuple
+array([[187, 158, 104, 121, 143],
+       [198, 125, 255, 255, 147],
+       [209, 134, 255,  97, 182],
+       [  1,   2,   3,   4,   5],
+       [  1,   2,   3,   4,   5],
+       [  1,   2,   3,   4,   5]])
+
+e.g. lst = numpy.hsplit(ims,5) # horizontal split - beware splitting non-evenly split columns
+e.g. lst2 = numpy.vsplit(ims,3) # vertical split - beware splitting non-evenly split columns
+e.g. lst2[0] # to access the first array of the split matrix
 
 
 =======================================
