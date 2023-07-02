@@ -1,0 +1,3862 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://docs.python.org/3/tutorial/controlflow.html#the-range-function
+Subject: =?utf-8?Q?4.=20More=20Control=20Flow=20Tools=20=E2=80=94=20Python=203.11.?=
+ =?utf-8?Q?4=20documentation?=
+Date: Tue, 27 Jun 2023 21:11:37 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0----"
+
+
+------MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0----
+Content-Type: text/html
+Content-ID: <frame-962233A2573399D9372C71967483C714@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/tutorial/controlflow.html#the-range-function
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D=
+"cid:css-b003df99-6973-4359-b566-49753d0cd50f@mhtml.blink" />
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0"><meta name=3D"generator" content=3D"Docutils 0.17.1: http://docutil=
+s.sourceforge.net/">
+<meta property=3D"og:title" content=3D"4. More Control Flow Tools">
+<meta property=3D"og:type" content=3D"website">
+<meta property=3D"og:url" content=3D"https://docs.python.org/3/tutorial/con=
+trolflow.html">
+<meta property=3D"og:site_name" content=3D"Python documentation">
+<meta property=3D"og:description" content=3D"Besides the while statement ju=
+st introduced, Python uses the usual flow control statements known from oth=
+er languages, with some twists. if Statements: Perhaps the most well-known =
+statement type is...">
+<meta property=3D"og:image" content=3D"https://docs.python.org/3/_static/og=
+-image.png">
+<meta property=3D"og:image:alt" content=3D"Python documentation">
+<meta name=3D"description" content=3D"Besides the while statement just intr=
+oduced, Python uses the usual flow control statements known from other lang=
+uages, with some twists. if Statements: Perhaps the most well-known stateme=
+nt type is...">
+<meta property=3D"og:image:width" content=3D"200">
+<meta property=3D"og:image:height" content=3D"200">
+<meta name=3D"theme-color" content=3D"#3776ab">
+
+    <title>4. More Control Flow Tools =E2=80=94 Python 3.11.4 documentation=
+</title><meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1.0">
+   =20
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://docs.python.=
+org/3/_static/pygments.css">
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://docs.python.=
+org/3/_static/pydoctheme.css?digest=3D2d3badd06fe70b34b68db01f99471ce1624ff=
+e4a">
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+    <link rel=3D"search" type=3D"application/opensearchdescription+xml" tit=
+le=3D"Search within Python 3.11.4 documentation" href=3D"https://docs.pytho=
+n.org/3/_static/opensearch.xml">
+    <link rel=3D"author" title=3D"About these documents" href=3D"https://do=
+cs.python.org/3/about.html">
+    <link rel=3D"index" title=3D"Index" href=3D"https://docs.python.org/3/g=
+enindex.html">
+    <link rel=3D"search" title=3D"Search" href=3D"https://docs.python.org/3=
+/search.html">
+    <link rel=3D"copyright" title=3D"Copyright" href=3D"https://docs.python=
+.org/3/copyright.html">
+    <link rel=3D"next" title=3D"5. Data Structures" href=3D"https://docs.py=
+thon.org/3/tutorial/datastructures.html">
+    <link rel=3D"prev" title=3D"3. An Informal Introduction to Python" href=
+=3D"https://docs.python.org/3/tutorial/introduction.html">
+    <link rel=3D"canonical" href=3D"https://docs.python.org/3/tutorial/cont=
+rolflow.html">
+   =20
+     =20
+   =20
+
+   =20
+   =20
+<link rel=3D"shortcut icon" type=3D"image/png" href=3D"https://docs.python.=
+org/3/_static/py.svg">
+           =20
+            =20
+
+  </head>
+<body>
+<div class=3D"mobile-nav">
+    <input type=3D"checkbox" id=3D"menuToggler" class=3D"toggler__input" ar=
+ia-controls=3D"navigation" aria-pressed=3D"false" aria-expanded=3D"false" r=
+ole=3D"button" aria-label=3D"Menu">
+    <label for=3D"menuToggler" class=3D"toggler__label">
+        <span></span>
+    </label>
+    <nav class=3D"nav-content" role=3D"navigation">
+         <a href=3D"https://www.python.org/" class=3D"nav-logo">
+             <img src=3D"https://docs.python.org/3/_static/py.svg" alt=3D"L=
+ogo">
+         </a>
+        <div class=3D"version_switcher_placeholder"><select id=3D"version_s=
+elect"><option value=3D"3.13">dev (3.13)</option><option value=3D"3.12">pre=
+ (3.12)</option><option value=3D"3.11" selected=3D"selected">3.11.4</option=
+><option value=3D"3.10">3.10</option><option value=3D"3.9">3.9</option><opt=
+ion value=3D"3.8">3.8</option><option value=3D"3.7">3.7</option><option val=
+ue=3D"3.6">3.6</option><option value=3D"3.5">3.5</option><option value=3D"2=
+.7">2.7</option></select></div>
+        <form role=3D"search" class=3D"search" action=3D"https://docs.pytho=
+n.org/3/search.html" method=3D"get">
+            <svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"20" height=
+=3D"20" viewBox=3D"0 0 24 24" class=3D"search-icon">
+                <path fill-rule=3D"nonzero" d=3D"M15.5 14h-.79l-.28-.27a6.5=
+ 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.3=
+4 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41=
+ 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S=
+7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill=3D"#444"></path>
+            </svg>
+            <input type=3D"text" name=3D"q" aria-label=3D"Quick search">
+            <input type=3D"submit" value=3D"Go">
+        </form>
+    </nav>
+    <div class=3D"menu-wrapper">
+        <nav class=3D"menu" role=3D"navigation" aria-label=3D"main navigati=
+on" tabindex=3D"-1">
+            <div class=3D"language_switcher_placeholder"><select id=3D"lang=
+uage_select"><option value=3D"en" selected=3D"selected">English</option><op=
+tion value=3D"es">Spanish</option><option value=3D"fr">French</option><opti=
+on value=3D"ja">Japanese</option><option value=3D"ko">Korean</option><optio=
+n value=3D"pt-br">Brazilian Portuguese</option><option value=3D"tr">Turkish=
+</option><option value=3D"zh-cn">Simplified Chinese</option><option value=
+=3D"zh-tw">Traditional Chinese</option></select></div>
+  <div>
+    <h3><a href=3D"https://docs.python.org/3/contents.html">Table of Conten=
+ts</a></h3>
+    <ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#">4. More Control Flow Tools</a><ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#if-statements">4.1. <code class=3D"xref std std-keywor=
+d docutils literal notranslate"><span class=3D"pre">if</span></code> Statem=
+ents</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#for-statements">4.2. <code class=3D"xref std std-keywo=
+rd docutils literal notranslate"><span class=3D"pre">for</span></code> Stat=
+ements</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#the-range-function">4.3. The <code class=3D"xref py py=
+-func docutils literal notranslate"><span class=3D"pre">range()</span></cod=
+e> Function</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loop=
+s">4.4. <code class=3D"xref std std-keyword docutils literal notranslate"><=
+span class=3D"pre">break</span></code> and <code class=3D"xref std std-keyw=
+ord docutils literal notranslate"><span class=3D"pre">continue</span></code=
+> Statements, and <code class=3D"xref std std-keyword docutils literal notr=
+anslate"><span class=3D"pre">else</span></code> Clauses on Loops</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#pass-statements">4.5. <code class=3D"xref std std-keyw=
+ord docutils literal notranslate"><span class=3D"pre">pass</span></code> St=
+atements</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#match-statements">4.6. <code class=3D"xref std std-key=
+word docutils literal notranslate"><span class=3D"pre">match</span></code> =
+Statements</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#defining-functions">4.7. Defining Functions</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#more-on-defining-functions">4.8. More on Defining Func=
+tions</a><ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#default-argument-values">4.8.1. Default Argument Value=
+s</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#keyword-arguments">4.8.2. Keyword Arguments</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#special-parameters">4.8.3. Special parameters</a><ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#positional-or-keyword-arguments">4.8.3.1. Positional-o=
+r-Keyword Arguments</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#positional-only-parameters">4.8.3.2. Positional-Only P=
+arameters</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#keyword-only-arguments">4.8.3.3. Keyword-Only Argument=
+s</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#function-examples">4.8.3.4. Function Examples</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#recap">4.8.3.5. Recap</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#arbitrary-argument-lists">4.8.4. Arbitrary Argument Li=
+sts</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#unpacking-argument-lists">4.8.5. Unpacking Argument Li=
+sts</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#lambda-expressions">4.8.6. Lambda Expressions</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#documentation-strings">4.8.7. Documentation Strings</a=
+></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#function-annotations">4.8.8. Function Annotations</a><=
+/li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#intermezzo-coding-style">4.9. Intermezzo: Coding Style=
+</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class=3D"topless"><a href=3D"https://docs.python.org/3/tutorial/intr=
+oduction.html" title=3D"previous chapter"><span class=3D"section-number">3.=
+ </span>An Informal Introduction to Python</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class=3D"topless"><a href=3D"https://docs.python.org/3/tutorial/data=
+structures.html" title=3D"next chapter"><span class=3D"section-number">5. <=
+/span>Data Structures</a></p>
+  </div>
+  <div role=3D"note" aria-label=3D"source link">
+    <h3>This Page</h3>
+    <ul class=3D"this-page-menu">
+      <li><a href=3D"https://docs.python.org/3/bugs.html">Report a Bug</a><=
+/li>
+      <li>
+        <a href=3D"https://github.com/python/cpython/blob/3.11/Doc/tutorial=
+/controlflow.rst" rel=3D"nofollow">Show Source
+        </a>
+      </li>
+    </ul>
+  </div>
+        </nav>
+    </div>
+</div>
+
+ =20
+    <div class=3D"related" role=3D"navigation" aria-label=3D"related naviga=
+tion">
+      <h3>Navigation</h3>
+      <ul>
+        <li class=3D"right" style=3D"margin-right: 10px">
+          <a href=3D"https://docs.python.org/3/genindex.html" title=3D"Gene=
+ral Index" accesskey=3D"I">index</a></li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/py-modindex.html" title=3D"P=
+ython Module Index">modules</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/tutorial/datastructures.html=
+" title=3D"5. Data Structures" accesskey=3D"N">next</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/tutorial/introduction.html" =
+title=3D"3. An Informal Introduction to Python" accesskey=3D"P">previous</a=
+> |</li>
+
+          <li><img src=3D"https://docs.python.org/3/_static/py.svg" alt=3D"=
+python logo" style=3D"vertical-align: middle; margin-top: -1px"></li>
+          <li><a href=3D"https://www.python.org/">Python</a> =C2=BB</li>
+          <li class=3D"switchers">
+            <div class=3D"language_switcher_placeholder"><select id=3D"lang=
+uage_select"><option value=3D"en" selected=3D"selected">English</option><op=
+tion value=3D"es">Spanish</option><option value=3D"fr">French</option><opti=
+on value=3D"ja">Japanese</option><option value=3D"ko">Korean</option><optio=
+n value=3D"pt-br">Brazilian Portuguese</option><option value=3D"tr">Turkish=
+</option><option value=3D"zh-cn">Simplified Chinese</option><option value=
+=3D"zh-tw">Traditional Chinese</option></select></div>
+            <div class=3D"version_switcher_placeholder"><select id=3D"versi=
+on_select"><option value=3D"3.13">dev (3.13)</option><option value=3D"3.12"=
+>pre (3.12)</option><option value=3D"3.11" selected=3D"selected">3.11.4</op=
+tion><option value=3D"3.10">3.10</option><option value=3D"3.9">3.9</option>=
+<option value=3D"3.8">3.8</option><option value=3D"3.7">3.7</option><option=
+ value=3D"3.6">3.6</option><option value=3D"3.5">3.5</option><option value=
+=3D"2.7">2.7</option></select></div>
+          </li>
+          <li>
+             =20
+          </li>
+    <li id=3D"cpython-language-and-version">
+      <a href=3D"https://docs.python.org/3/index.html">3.11.4 Documentation=
+</a> =C2=BB
+    </li>
+
+          <li class=3D"nav-item nav-item-1"><a href=3D"https://docs.python.=
+org/3/tutorial/index.html" accesskey=3D"U">The Python Tutorial</a> =C2=BB</=
+li>
+        <li class=3D"nav-item nav-item-this"><a href=3D"https://docs.python=
+.org/3/tutorial/controlflow.html"><span class=3D"section-number">4. </span>=
+More Control Flow Tools</a></li>
+                <li class=3D"right">
+                   =20
+
+    <div class=3D"inline-search" role=3D"search">
+        <form class=3D"inline-search" action=3D"https://docs.python.org/3/s=
+earch.html" method=3D"get">
+          <input placeholder=3D"Quick search" aria-label=3D"Quick search" t=
+ype=3D"text" name=3D"q">
+          <input type=3D"submit" value=3D"Go">
+         =20
+         =20
+        </form>
+    </div>
+                     |
+                </li>
+           =20
+      </ul>
+    </div>   =20
+
+    <div class=3D"document">
+      <div class=3D"documentwrapper">
+        <div class=3D"bodywrapper">
+          <div class=3D"body" role=3D"main">
+           =20
+  <section id=3D"more-control-flow-tools">
+<span id=3D"tut-morecontrol"></span><h1><span class=3D"section-number">4. <=
+/span>More Control Flow Tools<a class=3D"headerlink" href=3D"https://docs.p=
+ython.org/3/tutorial/controlflow.html#more-control-flow-tools" title=3D"Per=
+malink to this headline">=C2=B6</a></h1>
+<p>Besides the <a class=3D"reference internal" href=3D"https://docs.python.=
+org/3/reference/compound_stmts.html#while"><code class=3D"xref std std-keyw=
+ord docutils literal notranslate"><span class=3D"pre">while</span></code></=
+a> statement just introduced, Python uses the usual
+flow control statements known from other languages, with some twists.</p>
+<section id=3D"if-statements">
+<span id=3D"tut-if"></span><h2><span class=3D"section-number">4.1. </span><=
+code class=3D"xref std std-keyword docutils literal notranslate"><span clas=
+s=3D"pre">if</span></code> Statements<a class=3D"headerlink" href=3D"https:=
+//docs.python.org/3/tutorial/controlflow.html#if-statements" title=3D"Perma=
+link to this headline">=C2=B6</a></h2>
+<p>Perhaps the most well-known statement type is the <a class=3D"reference =
+internal" href=3D"https://docs.python.org/3/reference/compound_stmts.html#i=
+f"><code class=3D"xref std std-keyword docutils literal notranslate"><span =
+class=3D"pre">if</span></code></a> statement.  For
+example:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">x</span> <span class=3D"o">=3D</span> <span class=3D"nb">int</spa=
+n><span class=3D"p">(</span><span class=3D"nb">input</span><span class=3D"p=
+">(</span><span class=3D"s2">"Please enter an integer: "</span><span class=
+=3D"p">))</span>
+<span class=3D"go">Please enter an integer: 42</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"k">if</span> <span cl=
+ass=3D"n">x</span> <span class=3D"o">&lt;</span> <span class=3D"mi">0</span=
+><span class=3D"p">:</span>
+<span class=3D"gp">... </span>    <span class=3D"n">x</span> <span class=3D=
+"o">=3D</span> <span class=3D"mi">0</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s1">'Negative changed to zero'</span><span c=
+lass=3D"p">)</span>
+<span class=3D"gp">... </span><span class=3D"k">elif</span> <span class=3D"=
+n">x</span> <span class=3D"o">=3D=3D</span> <span class=3D"mi">0</span><spa=
+n class=3D"p">:</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s1">'Zero'</span><span class=3D"p">)</span>
+<span class=3D"gp">... </span><span class=3D"k">elif</span> <span class=3D"=
+n">x</span> <span class=3D"o">=3D=3D</span> <span class=3D"mi">1</span><spa=
+n class=3D"p">:</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s1">'Single'</span><span class=3D"p">)</span=
+>
+<span class=3D"gp">... </span><span class=3D"k">else</span><span class=3D"p=
+">:</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s1">'More'</span><span class=3D"p">)</span>
+<span class=3D"gp">...</span>
+<span class=3D"go">More</span>
+</pre></div>
+</div>
+<p>There can be zero or more <a class=3D"reference internal" href=3D"https:=
+//docs.python.org/3/reference/compound_stmts.html#elif"><code class=3D"xref=
+ std std-keyword docutils literal notranslate"><span class=3D"pre">elif</sp=
+an></code></a> parts, and the <a class=3D"reference internal" href=3D"https=
+://docs.python.org/3/reference/compound_stmts.html#else"><code class=3D"xre=
+f std std-keyword docutils literal notranslate"><span class=3D"pre">else</s=
+pan></code></a> part is
+optional.  The keyword =E2=80=98<code class=3D"xref std std-keyword docutil=
+s literal notranslate"><span class=3D"pre">elif</span></code>=E2=80=99 is s=
+hort for =E2=80=98else if=E2=80=99, and is useful
+to avoid excessive indentation.  An  <code class=3D"xref std std-keyword do=
+cutils literal notranslate"><span class=3D"pre">if</span></code> =E2=80=A6 =
+<code class=3D"xref std std-keyword docutils literal notranslate"><span cla=
+ss=3D"pre">elif</span></code> =E2=80=A6
+<code class=3D"xref std std-keyword docutils literal notranslate"><span cla=
+ss=3D"pre">elif</span></code> =E2=80=A6 sequence is a substitute for the <c=
+ode class=3D"docutils literal notranslate"><span class=3D"pre">switch</span=
+></code> or
+<code class=3D"docutils literal notranslate"><span class=3D"pre">case</span=
+></code> statements found in other languages.</p>
+<p>If you=E2=80=99re comparing the same value to several constants, or chec=
+king for specific types or
+attributes, you may also find the <code class=3D"xref std std-keyword docut=
+ils literal notranslate"><span class=3D"pre">match</span></code> statement =
+useful. For more
+details see <a class=3D"reference internal" href=3D"https://docs.python.org=
+/3/tutorial/controlflow.html#tut-match"><span class=3D"std std-ref">match S=
+tatements</span></a>.</p>
+</section>
+<section id=3D"for-statements">
+<span id=3D"tut-for"></span><h2><span class=3D"section-number">4.2. </span>=
+<code class=3D"xref std std-keyword docutils literal notranslate"><span cla=
+ss=3D"pre">for</span></code> Statements<a class=3D"headerlink" href=3D"http=
+s://docs.python.org/3/tutorial/controlflow.html#for-statements" title=3D"Pe=
+rmalink to this headline">=C2=B6</a></h2>
+<p id=3D"index-0">The <a class=3D"reference internal" href=3D"https://docs.=
+python.org/3/reference/compound_stmts.html#for"><code class=3D"xref std std=
+-keyword docutils literal notranslate"><span class=3D"pre">for</span></code=
+></a> statement in Python differs a bit from what you may be used
+to in C or Pascal.  Rather than always iterating over an arithmetic progres=
+sion
+of numbers (like in Pascal), or giving the user the ability to define both =
+the
+iteration step and halting condition (as C), Python=E2=80=99s <code class=
+=3D"xref std std-keyword docutils literal notranslate"><span class=3D"pre">=
+for</span></code> statement
+iterates over the items of any sequence (a list or a string), in the order =
+that
+they appear in the sequence.  For example (no pun intended):</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"c1"># Measure some strings:</span>
+<span class=3D"gp">... </span><span class=3D"n">words</span> <span class=3D=
+"o">=3D</span> <span class=3D"p">[</span><span class=3D"s1">'cat'</span><sp=
+an class=3D"p">,</span> <span class=3D"s1">'window'</span><span class=3D"p"=
+>,</span> <span class=3D"s1">'defenestrate'</span><span class=3D"p">]</span=
+>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"k">for</span> <span c=
+lass=3D"n">w</span> <span class=3D"ow">in</span> <span class=3D"n">words</s=
+pan><span class=3D"p">:</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"n">w</span><span class=3D"p">,</span> <span =
+class=3D"nb">len</span><span class=3D"p">(</span><span class=3D"n">w</span>=
+<span class=3D"p">))</span>
+<span class=3D"gp">...</span>
+<span class=3D"go">cat 3</span>
+<span class=3D"go">window 6</span>
+<span class=3D"go">defenestrate 12</span>
+</pre></div>
+</div>
+<p>Code that modifies a collection while iterating over that same collectio=
+n can
+be tricky to get right.  Instead, it is usually more straight-forward to lo=
+op
+over a copy of the collection or to create a new collection:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"c1"># Create a sa=
+mple collection</span>
+<span class=3D"n">users</span> <span class=3D"o">=3D</span> <span class=3D"=
+p">{</span><span class=3D"s1">'Hans'</span><span class=3D"p">:</span> <span=
+ class=3D"s1">'active'</span><span class=3D"p">,</span> <span class=3D"s1">=
+'=C3=89l=C3=A9onore'</span><span class=3D"p">:</span> <span class=3D"s1">'i=
+nactive'</span><span class=3D"p">,</span> <span class=3D"s1">'=E6=99=AF=E5=
+=A4=AA=E9=83=8E'</span><span class=3D"p">:</span> <span class=3D"s1">'activ=
+e'</span><span class=3D"p">}</span>
+
+<span class=3D"c1"># Strategy:  Iterate over a copy</span>
+<span class=3D"k">for</span> <span class=3D"n">user</span><span class=3D"p"=
+>,</span> <span class=3D"n">status</span> <span class=3D"ow">in</span> <spa=
+n class=3D"n">users</span><span class=3D"o">.</span><span class=3D"n">copy<=
+/span><span class=3D"p">()</span><span class=3D"o">.</span><span class=3D"n=
+">items</span><span class=3D"p">():</span>
+    <span class=3D"k">if</span> <span class=3D"n">status</span> <span class=
+=3D"o">=3D=3D</span> <span class=3D"s1">'inactive'</span><span class=3D"p">=
+:</span>
+        <span class=3D"k">del</span> <span class=3D"n">users</span><span cl=
+ass=3D"p">[</span><span class=3D"n">user</span><span class=3D"p">]</span>
+
+<span class=3D"c1"># Strategy:  Create a new collection</span>
+<span class=3D"n">active_users</span> <span class=3D"o">=3D</span> <span cl=
+ass=3D"p">{}</span>
+<span class=3D"k">for</span> <span class=3D"n">user</span><span class=3D"p"=
+>,</span> <span class=3D"n">status</span> <span class=3D"ow">in</span> <spa=
+n class=3D"n">users</span><span class=3D"o">.</span><span class=3D"n">items=
+</span><span class=3D"p">():</span>
+    <span class=3D"k">if</span> <span class=3D"n">status</span> <span class=
+=3D"o">=3D=3D</span> <span class=3D"s1">'active'</span><span class=3D"p">:<=
+/span>
+        <span class=3D"n">active_users</span><span class=3D"p">[</span><spa=
+n class=3D"n">user</span><span class=3D"p">]</span> <span class=3D"o">=3D</=
+span> <span class=3D"n">status</span>
+</pre></div>
+</div>
+</section>
+<section id=3D"the-range-function">
+<span id=3D"tut-range"></span><h2><span class=3D"section-number">4.3. </spa=
+n>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/lib=
+rary/stdtypes.html#range" title=3D"range"><code class=3D"xref py py-func do=
+cutils literal notranslate"><span class=3D"pre">range()</span></code></a> F=
+unction<a class=3D"headerlink" href=3D"https://docs.python.org/3/tutorial/c=
+ontrolflow.html#the-range-function" title=3D"Permalink to this headline">=
+=C2=B6</a></h2>
+<p>If you do need to iterate over a sequence of numbers, the built-in funct=
+ion
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/s=
+tdtypes.html#range" title=3D"range"><code class=3D"xref py py-func docutils=
+ literal notranslate"><span class=3D"pre">range()</span></code></a> comes i=
+n handy.  It generates arithmetic progressions:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">for</span> <span class=3D"n">i</span> <span class=3D"ow">in</span=
+> <span class=3D"nb">range</span><span class=3D"p">(</span><span class=3D"m=
+i">5</span><span class=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"n">i</span><span class=3D"p">)</span>
+<span class=3D"gp">...</span>
+<span class=3D"go">0</span>
+<span class=3D"go">1</span>
+<span class=3D"go">2</span>
+<span class=3D"go">3</span>
+<span class=3D"go">4</span>
+</pre></div>
+</div>
+<p>The given end point is never part of the generated sequence; <code class=
+=3D"docutils literal notranslate"><span class=3D"pre">range(10)</span></cod=
+e> generates
+10 values, the legal indices for items of a sequence of length 10.  It
+is possible to let the range start at another number, or to specify a diffe=
+rent
+increment (even negative; sometimes this is called the =E2=80=98step=E2=80=
+=99):</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"nb">list</span><span class=3D"p">(</span><span class=3D"nb">range</s=
+pan><span class=3D"p">(</span><span class=3D"mi">5</span><span class=3D"p">=
+,</span> <span class=3D"mi">10</span><span class=3D"p">))</span>
+<span class=3D"go">[5, 6, 7, 8, 9]</span>
+
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"nb">list</span><span =
+class=3D"p">(</span><span class=3D"nb">range</span><span class=3D"p">(</spa=
+n><span class=3D"mi">0</span><span class=3D"p">,</span> <span class=3D"mi">=
+10</span><span class=3D"p">,</span> <span class=3D"mi">3</span><span class=
+=3D"p">))</span>
+<span class=3D"go">[0, 3, 6, 9]</span>
+
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"nb">list</span><span =
+class=3D"p">(</span><span class=3D"nb">range</span><span class=3D"p">(</spa=
+n><span class=3D"o">-</span><span class=3D"mi">10</span><span class=3D"p">,=
+</span> <span class=3D"o">-</span><span class=3D"mi">100</span><span class=
+=3D"p">,</span> <span class=3D"o">-</span><span class=3D"mi">30</span><span=
+ class=3D"p">))</span>
+<span class=3D"go">[-10, -40, -70]</span>
+</pre></div>
+</div>
+<p>To iterate over the indices of a sequence, you can combine <a class=3D"r=
+eference internal" href=3D"https://docs.python.org/3/library/stdtypes.html#=
+range" title=3D"range"><code class=3D"xref py py-func docutils literal notr=
+anslate"><span class=3D"pre">range()</span></code></a> and
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/f=
+unctions.html#len" title=3D"len"><code class=3D"xref py py-func docutils li=
+teral notranslate"><span class=3D"pre">len()</span></code></a> as follows:<=
+/p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">a</span> <span class=3D"o">=3D</span> <span class=3D"p">[</span><=
+span class=3D"s1">'Mary'</span><span class=3D"p">,</span> <span class=3D"s1=
+">'had'</span><span class=3D"p">,</span> <span class=3D"s1">'a'</span><span=
+ class=3D"p">,</span> <span class=3D"s1">'little'</span><span class=3D"p">,=
+</span> <span class=3D"s1">'lamb'</span><span class=3D"p">]</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"k">for</span> <span c=
+lass=3D"n">i</span> <span class=3D"ow">in</span> <span class=3D"nb">range</=
+span><span class=3D"p">(</span><span class=3D"nb">len</span><span class=3D"=
+p">(</span><span class=3D"n">a</span><span class=3D"p">)):</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"n">i</span><span class=3D"p">,</span> <span =
+class=3D"n">a</span><span class=3D"p">[</span><span class=3D"n">i</span><sp=
+an class=3D"p">])</span>
+<span class=3D"gp">...</span>
+<span class=3D"go">0 Mary</span>
+<span class=3D"go">1 had</span>
+<span class=3D"go">2 a</span>
+<span class=3D"go">3 little</span>
+<span class=3D"go">4 lamb</span>
+</pre></div>
+</div>
+<p>In most such cases, however, it is convenient to use the <a class=3D"ref=
+erence internal" href=3D"https://docs.python.org/3/library/functions.html#e=
+numerate" title=3D"enumerate"><code class=3D"xref py py-func docutils liter=
+al notranslate"><span class=3D"pre">enumerate()</span></code></a>
+function, see <a class=3D"reference internal" href=3D"https://docs.python.o=
+rg/3/tutorial/datastructures.html#tut-loopidioms"><span class=3D"std std-re=
+f">Looping Techniques</span></a>.</p>
+<p>A strange thing happens if you just print a range:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"nb">range</span><span class=3D"p">(</span><span class=3D"mi">10</spa=
+n><span class=3D"p">)</span>
+<span class=3D"go">range(0, 10)</span>
+</pre></div>
+</div>
+<p>In many ways the object returned by <a class=3D"reference internal" href=
+=3D"https://docs.python.org/3/library/stdtypes.html#range" title=3D"range">=
+<code class=3D"xref py py-func docutils literal notranslate"><span class=3D=
+"pre">range()</span></code></a> behaves as if it is a list,
+but in fact it isn=E2=80=99t. It is an object which returns the successive =
+items of
+the desired sequence when you iterate over it, but it doesn=E2=80=99t reall=
+y make
+the list, thus saving space.</p>
+<p>We say such an object is <a class=3D"reference internal" href=3D"https:/=
+/docs.python.org/3/glossary.html#term-iterable"><span class=3D"xref std std=
+-term">iterable</span></a>, that is, suitable as a target for
+functions and constructs that expect something from which they can
+obtain successive items until the supply is exhausted.  We have seen that
+the <a class=3D"reference internal" href=3D"https://docs.python.org/3/refer=
+ence/compound_stmts.html#for"><code class=3D"xref std std-keyword docutils =
+literal notranslate"><span class=3D"pre">for</span></code></a> statement is=
+ such a construct, while an example of a function
+that takes an iterable is <a class=3D"reference internal" href=3D"https://d=
+ocs.python.org/3/library/functions.html#sum" title=3D"sum"><code class=3D"x=
+ref py py-func docutils literal notranslate"><span class=3D"pre">sum()</spa=
+n></code></a>:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"nb">sum</span><span class=3D"p">(</span><span class=3D"nb">range</sp=
+an><span class=3D"p">(</span><span class=3D"mi">4</span><span class=3D"p">)=
+)</span>  <span class=3D"c1"># 0 + 1 + 2 + 3</span>
+<span class=3D"go">6</span>
+</pre></div>
+</div>
+<p>Later we will see more functions that return iterables and take iterable=
+s as
+arguments.  In chapter <a class=3D"reference internal" href=3D"https://docs=
+.python.org/3/tutorial/datastructures.html#tut-structures"><span class=3D"s=
+td std-ref">Data Structures</span></a>, we will discuss in more detail abou=
+t
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/s=
+tdtypes.html#list" title=3D"list"><code class=3D"xref py py-func docutils l=
+iteral notranslate"><span class=3D"pre">list()</span></code></a>.</p>
+</section>
+<section id=3D"break-and-continue-statements-and-else-clauses-on-loops">
+<span id=3D"tut-break"></span><h2><span class=3D"section-number">4.4. </spa=
+n><code class=3D"xref std std-keyword docutils literal notranslate"><span c=
+lass=3D"pre">break</span></code> and <code class=3D"xref std std-keyword do=
+cutils literal notranslate"><span class=3D"pre">continue</span></code> Stat=
+ements, and <code class=3D"xref std std-keyword docutils literal notranslat=
+e"><span class=3D"pre">else</span></code> Clauses on Loops<a class=3D"heade=
+rlink" href=3D"https://docs.python.org/3/tutorial/controlflow.html#break-an=
+d-continue-statements-and-else-clauses-on-loops" title=3D"Permalink to this=
+ headline">=C2=B6</a></h2>
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/re=
+ference/simple_stmts.html#break"><code class=3D"xref std std-keyword docuti=
+ls literal notranslate"><span class=3D"pre">break</span></code></a> stateme=
+nt, like in C, breaks out of the innermost enclosing
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/reference=
+/compound_stmts.html#for"><code class=3D"xref std std-keyword docutils lite=
+ral notranslate"><span class=3D"pre">for</span></code></a> or <a class=3D"r=
+eference internal" href=3D"https://docs.python.org/3/reference/compound_stm=
+ts.html#while"><code class=3D"xref std std-keyword docutils literal notrans=
+late"><span class=3D"pre">while</span></code></a> loop.</p>
+<p>Loop statements may have an <code class=3D"xref std std-keyword docutils=
+ literal notranslate"><span class=3D"pre">else</span></code> clause; it is =
+executed when the loop
+terminates through exhaustion of the iterable (with <a class=3D"reference i=
+nternal" href=3D"https://docs.python.org/3/reference/compound_stmts.html#fo=
+r"><code class=3D"xref std std-keyword docutils literal notranslate"><span =
+class=3D"pre">for</span></code></a>) or when the
+condition becomes false (with <a class=3D"reference internal" href=3D"https=
+://docs.python.org/3/reference/compound_stmts.html#while"><code class=3D"xr=
+ef std std-keyword docutils literal notranslate"><span class=3D"pre">while<=
+/span></code></a>), but not when the loop is
+terminated by a <a class=3D"reference internal" href=3D"https://docs.python=
+.org/3/reference/simple_stmts.html#break"><code class=3D"xref std std-keywo=
+rd docutils literal notranslate"><span class=3D"pre">break</span></code></a=
+> statement.  This is exemplified by the
+following loop, which searches for prime numbers:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">for</span> <span class=3D"n">n</span> <span class=3D"ow">in</span=
+> <span class=3D"nb">range</span><span class=3D"p">(</span><span class=3D"m=
+i">2</span><span class=3D"p">,</span> <span class=3D"mi">10</span><span cla=
+ss=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"k">for</span> <span class=
+=3D"n">x</span> <span class=3D"ow">in</span> <span class=3D"nb">range</span=
+><span class=3D"p">(</span><span class=3D"mi">2</span><span class=3D"p">,</=
+span> <span class=3D"n">n</span><span class=3D"p">):</span>
+<span class=3D"gp">... </span>        <span class=3D"k">if</span> <span cla=
+ss=3D"n">n</span> <span class=3D"o">%</span> <span class=3D"n">x</span> <sp=
+an class=3D"o">=3D=3D</span> <span class=3D"mi">0</span><span class=3D"p">:=
+</span>
+<span class=3D"gp">... </span>            <span class=3D"nb">print</span><s=
+pan class=3D"p">(</span><span class=3D"n">n</span><span class=3D"p">,</span=
+> <span class=3D"s1">'equals'</span><span class=3D"p">,</span> <span class=
+=3D"n">x</span><span class=3D"p">,</span> <span class=3D"s1">'*'</span><spa=
+n class=3D"p">,</span> <span class=3D"n">n</span><span class=3D"o">//</span=
+><span class=3D"n">x</span><span class=3D"p">)</span>
+<span class=3D"gp">... </span>            <span class=3D"k">break</span>
+<span class=3D"gp">... </span>    <span class=3D"k">else</span><span class=
+=3D"p">:</span>
+<span class=3D"gp">... </span>        <span class=3D"c1"># loop fell throug=
+h without finding a factor</span>
+<span class=3D"gp">... </span>        <span class=3D"nb">print</span><span =
+class=3D"p">(</span><span class=3D"n">n</span><span class=3D"p">,</span> <s=
+pan class=3D"s1">'is a prime number'</span><span class=3D"p">)</span>
+<span class=3D"gp">...</span>
+<span class=3D"go">2 is a prime number</span>
+<span class=3D"go">3 is a prime number</span>
+<span class=3D"go">4 equals 2 * 2</span>
+<span class=3D"go">5 is a prime number</span>
+<span class=3D"go">6 equals 2 * 3</span>
+<span class=3D"go">7 is a prime number</span>
+<span class=3D"go">8 equals 2 * 4</span>
+<span class=3D"go">9 equals 3 * 3</span>
+</pre></div>
+</div>
+<p>(Yes, this is the correct code.  Look closely: the <code class=3D"docuti=
+ls literal notranslate"><span class=3D"pre">else</span></code> clause belon=
+gs to
+the <a class=3D"reference internal" href=3D"https://docs.python.org/3/refer=
+ence/compound_stmts.html#for"><code class=3D"xref std std-keyword docutils =
+literal notranslate"><span class=3D"pre">for</span></code></a> loop, <stron=
+g>not</strong> the <a class=3D"reference internal" href=3D"https://docs.pyt=
+hon.org/3/reference/compound_stmts.html#if"><code class=3D"xref std std-key=
+word docutils literal notranslate"><span class=3D"pre">if</span></code></a>=
+ statement.)</p>
+<p>When used with a loop, the <code class=3D"docutils literal notranslate">=
+<span class=3D"pre">else</span></code> clause has more in common with the
+<code class=3D"docutils literal notranslate"><span class=3D"pre">else</span=
+></code> clause of a <a class=3D"reference internal" href=3D"https://docs.p=
+ython.org/3/reference/compound_stmts.html#try"><code class=3D"xref std std-=
+keyword docutils literal notranslate"><span class=3D"pre">try</span></code>=
+</a> statement than it does with that of
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/reference=
+/compound_stmts.html#if"><code class=3D"xref std std-keyword docutils liter=
+al notranslate"><span class=3D"pre">if</span></code></a> statements: a <a c=
+lass=3D"reference internal" href=3D"https://docs.python.org/3/reference/com=
+pound_stmts.html#try"><code class=3D"xref std std-keyword docutils literal =
+notranslate"><span class=3D"pre">try</span></code></a> statement=E2=80=99s =
+<code class=3D"docutils literal notranslate"><span class=3D"pre">else</span=
+></code> clause runs
+when no exception occurs, and a loop=E2=80=99s <code class=3D"docutils lite=
+ral notranslate"><span class=3D"pre">else</span></code> clause runs when no=
+ <code class=3D"docutils literal notranslate"><span class=3D"pre">break</sp=
+an></code>
+occurs. For more on the <code class=3D"xref std std-keyword docutils litera=
+l notranslate"><span class=3D"pre">try</span></code> statement and exceptio=
+ns, see
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/tutorial/=
+errors.html#tut-handling"><span class=3D"std std-ref">Handling Exceptions</=
+span></a>.</p>
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/re=
+ference/simple_stmts.html#continue"><code class=3D"xref std std-keyword doc=
+utils literal notranslate"><span class=3D"pre">continue</span></code></a> s=
+tatement, also borrowed from C, continues with the next
+iteration of the loop:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">for</span> <span class=3D"n">num</span> <span class=3D"ow">in</sp=
+an> <span class=3D"nb">range</span><span class=3D"p">(</span><span class=3D=
+"mi">2</span><span class=3D"p">,</span> <span class=3D"mi">10</span><span c=
+lass=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"k">if</span> <span class=
+=3D"n">num</span> <span class=3D"o">%</span> <span class=3D"mi">2</span> <s=
+pan class=3D"o">=3D=3D</span> <span class=3D"mi">0</span><span class=3D"p">=
+:</span>
+<span class=3D"gp">... </span>        <span class=3D"nb">print</span><span =
+class=3D"p">(</span><span class=3D"s2">"Found an even number"</span><span c=
+lass=3D"p">,</span> <span class=3D"n">num</span><span class=3D"p">)</span>
+<span class=3D"gp">... </span>        <span class=3D"k">continue</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s2">"Found an odd number"</span><span class=
+=3D"p">,</span> <span class=3D"n">num</span><span class=3D"p">)</span>
+<span class=3D"gp">...</span>
+<span class=3D"go">Found an even number 2</span>
+<span class=3D"go">Found an odd number 3</span>
+<span class=3D"go">Found an even number 4</span>
+<span class=3D"go">Found an odd number 5</span>
+<span class=3D"go">Found an even number 6</span>
+<span class=3D"go">Found an odd number 7</span>
+<span class=3D"go">Found an even number 8</span>
+<span class=3D"go">Found an odd number 9</span>
+</pre></div>
+</div>
+</section>
+<section id=3D"pass-statements">
+<span id=3D"tut-pass"></span><h2><span class=3D"section-number">4.5. </span=
+><code class=3D"xref std std-keyword docutils literal notranslate"><span cl=
+ass=3D"pre">pass</span></code> Statements<a class=3D"headerlink" href=3D"ht=
+tps://docs.python.org/3/tutorial/controlflow.html#pass-statements" title=3D=
+"Permalink to this headline">=C2=B6</a></h2>
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/re=
+ference/simple_stmts.html#pass"><code class=3D"xref std std-keyword docutil=
+s literal notranslate"><span class=3D"pre">pass</span></code></a> statement=
+ does nothing. It can be used when a statement is
+required syntactically but the program requires no action. For example:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">while</span> <span class=3D"kc">True</span><span class=3D"p">:</s=
+pan>
+<span class=3D"gp">... </span>    <span class=3D"k">pass</span>  <span clas=
+s=3D"c1"># Busy-wait for keyboard interrupt (Ctrl+C)</span>
+<span class=3D"gp">...</span>
+</pre></div>
+</div>
+<p>This is commonly used for creating minimal classes:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">class</span> <span class=3D"nc">MyEmptyClass</span><span class=3D=
+"p">:</span>
+<span class=3D"gp">... </span>    <span class=3D"k">pass</span>
+<span class=3D"gp">...</span>
+</pre></div>
+</div>
+<p>Another place <a class=3D"reference internal" href=3D"https://docs.pytho=
+n.org/3/reference/simple_stmts.html#pass"><code class=3D"xref std std-keywo=
+rd docutils literal notranslate"><span class=3D"pre">pass</span></code></a>=
+ can be used is as a place-holder for a function or
+conditional body when you are working on new code, allowing you to keep thi=
+nking
+at a more abstract level.  The <code class=3D"xref std std-keyword docutils=
+ literal notranslate"><span class=3D"pre">pass</span></code> is silently ig=
+nored:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">initlog</span><span class=3D"p">(</=
+span><span class=3D"o">*</span><span class=3D"n">args</span><span class=3D"=
+p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"k">pass</span>   <span cla=
+ss=3D"c1"># Remember to implement this!</span>
+<span class=3D"gp">...</span>
+</pre></div>
+</div>
+</section>
+<section id=3D"match-statements">
+<span id=3D"tut-match"></span><h2><span class=3D"section-number">4.6. </spa=
+n><code class=3D"xref std std-keyword docutils literal notranslate"><span c=
+lass=3D"pre">match</span></code> Statements<a class=3D"headerlink" href=3D"=
+https://docs.python.org/3/tutorial/controlflow.html#match-statements" title=
+=3D"Permalink to this headline">=C2=B6</a></h2>
+<p>A <a class=3D"reference internal" href=3D"https://docs.python.org/3/refe=
+rence/compound_stmts.html#match"><code class=3D"xref std std-keyword docuti=
+ls literal notranslate"><span class=3D"pre">match</span></code></a> stateme=
+nt takes an expression and compares its value to successive
+patterns given as one or more case blocks.  This is superficially
+similar to a switch statement in C, Java or JavaScript (and many
+other languages), but it=E2=80=99s more similar to pattern matching in
+languages like Rust or Haskell. Only the first pattern that matches
+gets executed and it can also extract components (sequence elements
+or object attributes) from the value into variables.</p>
+<p>The simplest form compares a subject value against one or more literals:=
+</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">def</span> <sp=
+an class=3D"nf">http_error</span><span class=3D"p">(</span><span class=3D"n=
+">status</span><span class=3D"p">):</span>
+    <span class=3D"k">match</span> <span class=3D"n">status</span><span cla=
+ss=3D"p">:</span>
+        <span class=3D"k">case</span> <span class=3D"mi">400</span><span cl=
+ass=3D"p">:</span>
+            <span class=3D"k">return</span> <span class=3D"s2">"Bad request=
+"</span>
+        <span class=3D"k">case</span> <span class=3D"mi">404</span><span cl=
+ass=3D"p">:</span>
+            <span class=3D"k">return</span> <span class=3D"s2">"Not found"<=
+/span>
+        <span class=3D"k">case</span> <span class=3D"mi">418</span><span cl=
+ass=3D"p">:</span>
+            <span class=3D"k">return</span> <span class=3D"s2">"I'm a teapo=
+t"</span>
+        <span class=3D"k">case</span> <span class=3D"k">_</span><span class=
+=3D"p">:</span>
+            <span class=3D"k">return</span> <span class=3D"s2">"Something's=
+ wrong with the internet"</span>
+</pre></div>
+</div>
+<p>Note the last block: the =E2=80=9Cvariable name=E2=80=9D <code class=3D"=
+docutils literal notranslate"><span class=3D"pre">_</span></code> acts as a=
+ <em>wildcard</em> and
+never fails to match. If no case matches, none of the branches is executed.=
+</p>
+<p>You can combine several literals in a single pattern using <code class=
+=3D"docutils literal notranslate"><span class=3D"pre">|</span></code> (=E2=
+=80=9Cor=E2=80=9D):</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">case</span> <s=
+pan class=3D"mi">401</span> <span class=3D"o">|</span> <span class=3D"mi">4=
+03</span> <span class=3D"o">|</span> <span class=3D"mi">404</span><span cla=
+ss=3D"p">:</span>
+    <span class=3D"k">return</span> <span class=3D"s2">"Not allowed"</span>
+</pre></div>
+</div>
+<p>Patterns can look like unpacking assignments, and can be used to bind
+variables:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"c1"># point is an=
+ (x, y) tuple</span>
+<span class=3D"k">match</span> <span class=3D"n">point</span><span class=3D=
+"p">:</span>
+    <span class=3D"k">case</span> <span class=3D"p">(</span><span class=3D"=
+mi">0</span><span class=3D"p">,</span> <span class=3D"mi">0</span><span cla=
+ss=3D"p">):</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"s2">"Origin"</span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"p">(</span><span class=3D"=
+mi">0</span><span class=3D"p">,</span> <span class=3D"n">y</span><span clas=
+s=3D"p">):</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"sa">f</span><span class=3D"s2">"Y=3D</span><span class=3D"si">{</span>=
+<span class=3D"n">y</span><span class=3D"si">}</span><span class=3D"s2">"</=
+span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"p">(</span><span class=3D"=
+n">x</span><span class=3D"p">,</span> <span class=3D"mi">0</span><span clas=
+s=3D"p">):</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"sa">f</span><span class=3D"s2">"X=3D</span><span class=3D"si">{</span>=
+<span class=3D"n">x</span><span class=3D"si">}</span><span class=3D"s2">"</=
+span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"p">(</span><span class=3D"=
+n">x</span><span class=3D"p">,</span> <span class=3D"n">y</span><span class=
+=3D"p">):</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"sa">f</span><span class=3D"s2">"X=3D</span><span class=3D"si">{</span>=
+<span class=3D"n">x</span><span class=3D"si">}</span><span class=3D"s2">, Y=
+=3D</span><span class=3D"si">{</span><span class=3D"n">y</span><span class=
+=3D"si">}</span><span class=3D"s2">"</span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"k">_</span><span class=3D"=
+p">:</span>
+        <span class=3D"k">raise</span> <span class=3D"ne">ValueError</span>=
+<span class=3D"p">(</span><span class=3D"s2">"Not a point"</span><span clas=
+s=3D"p">)</span>
+</pre></div>
+</div>
+<p>Study that one carefully!  The first pattern has two literals, and can
+be thought of as an extension of the literal pattern shown above.  But
+the next two patterns combine a literal and a variable, and the
+variable <em>binds</em> a value from the subject (<code class=3D"docutils l=
+iteral notranslate"><span class=3D"pre">point</span></code>).  The fourth
+pattern captures two values, which makes it conceptually similar to
+the unpacking assignment <code class=3D"docutils literal notranslate"><span=
+ class=3D"pre">(x,</span> <span class=3D"pre">y)</span> <span class=3D"pre"=
+>=3D</span> <span class=3D"pre">point</span></code>.</p>
+<p>If you are using classes to structure your data
+you can use the class name followed by an argument list resembling a
+constructor, but with the ability to capture attributes into variables:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">class</span> <=
+span class=3D"nc">Point</span><span class=3D"p">:</span>
+    <span class=3D"n">x</span><span class=3D"p">:</span> <span class=3D"nb"=
+>int</span>
+    <span class=3D"n">y</span><span class=3D"p">:</span> <span class=3D"nb"=
+>int</span>
+
+<span class=3D"k">def</span> <span class=3D"nf">where_is</span><span class=
+=3D"p">(</span><span class=3D"n">point</span><span class=3D"p">):</span>
+    <span class=3D"k">match</span> <span class=3D"n">point</span><span clas=
+s=3D"p">:</span>
+        <span class=3D"k">case</span> <span class=3D"n">Point</span><span c=
+lass=3D"p">(</span><span class=3D"n">x</span><span class=3D"o">=3D</span><s=
+pan class=3D"mi">0</span><span class=3D"p">,</span> <span class=3D"n">y</sp=
+an><span class=3D"o">=3D</span><span class=3D"mi">0</span><span class=3D"p"=
+>):</span>
+            <span class=3D"nb">print</span><span class=3D"p">(</span><span =
+class=3D"s2">"Origin"</span><span class=3D"p">)</span>
+        <span class=3D"k">case</span> <span class=3D"n">Point</span><span c=
+lass=3D"p">(</span><span class=3D"n">x</span><span class=3D"o">=3D</span><s=
+pan class=3D"mi">0</span><span class=3D"p">,</span> <span class=3D"n">y</sp=
+an><span class=3D"o">=3D</span><span class=3D"n">y</span><span class=3D"p">=
+):</span>
+            <span class=3D"nb">print</span><span class=3D"p">(</span><span =
+class=3D"sa">f</span><span class=3D"s2">"Y=3D</span><span class=3D"si">{</s=
+pan><span class=3D"n">y</span><span class=3D"si">}</span><span class=3D"s2"=
+>"</span><span class=3D"p">)</span>
+        <span class=3D"k">case</span> <span class=3D"n">Point</span><span c=
+lass=3D"p">(</span><span class=3D"n">x</span><span class=3D"o">=3D</span><s=
+pan class=3D"n">x</span><span class=3D"p">,</span> <span class=3D"n">y</spa=
+n><span class=3D"o">=3D</span><span class=3D"mi">0</span><span class=3D"p">=
+):</span>
+            <span class=3D"nb">print</span><span class=3D"p">(</span><span =
+class=3D"sa">f</span><span class=3D"s2">"X=3D</span><span class=3D"si">{</s=
+pan><span class=3D"n">x</span><span class=3D"si">}</span><span class=3D"s2"=
+>"</span><span class=3D"p">)</span>
+        <span class=3D"k">case</span> <span class=3D"n">Point</span><span c=
+lass=3D"p">():</span>
+            <span class=3D"nb">print</span><span class=3D"p">(</span><span =
+class=3D"s2">"Somewhere else"</span><span class=3D"p">)</span>
+        <span class=3D"k">case</span> <span class=3D"k">_</span><span class=
+=3D"p">:</span>
+            <span class=3D"nb">print</span><span class=3D"p">(</span><span =
+class=3D"s2">"Not a point"</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>You can use positional parameters with some builtin classes that provide=
+ an
+ordering for their attributes (e.g. dataclasses). You can also define a spe=
+cific
+position for attributes in patterns by setting the <code class=3D"docutils =
+literal notranslate"><span class=3D"pre">__match_args__</span></code> speci=
+al
+attribute in your classes. If it=E2=80=99s set to (=E2=80=9Cx=E2=80=9D, =E2=
+=80=9Cy=E2=80=9D), the following patterns are all
+equivalent (and all bind the <code class=3D"docutils literal notranslate"><=
+span class=3D"pre">y</span></code> attribute to the <code class=3D"docutils=
+ literal notranslate"><span class=3D"pre">var</span></code> variable):</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"n">Point</span><s=
+pan class=3D"p">(</span><span class=3D"mi">1</span><span class=3D"p">,</spa=
+n> <span class=3D"n">var</span><span class=3D"p">)</span>
+<span class=3D"n">Point</span><span class=3D"p">(</span><span class=3D"mi">=
+1</span><span class=3D"p">,</span> <span class=3D"n">y</span><span class=3D=
+"o">=3D</span><span class=3D"n">var</span><span class=3D"p">)</span>
+<span class=3D"n">Point</span><span class=3D"p">(</span><span class=3D"n">x=
+</span><span class=3D"o">=3D</span><span class=3D"mi">1</span><span class=
+=3D"p">,</span> <span class=3D"n">y</span><span class=3D"o">=3D</span><span=
+ class=3D"n">var</span><span class=3D"p">)</span>
+<span class=3D"n">Point</span><span class=3D"p">(</span><span class=3D"n">y=
+</span><span class=3D"o">=3D</span><span class=3D"n">var</span><span class=
+=3D"p">,</span> <span class=3D"n">x</span><span class=3D"o">=3D</span><span=
+ class=3D"mi">1</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>A recommended way to read patterns is to look at them as an extended for=
+m of what you
+would put on the left of an assignment, to understand which variables would=
+ be set to
+what.
+Only the standalone names (like <code class=3D"docutils literal notranslate=
+"><span class=3D"pre">var</span></code> above) are assigned to by a match s=
+tatement.
+Dotted names (like <code class=3D"docutils literal notranslate"><span class=
+=3D"pre">foo.bar</span></code>), attribute names (the <code class=3D"docuti=
+ls literal notranslate"><span class=3D"pre">x=3D</span></code> and <code cl=
+ass=3D"docutils literal notranslate"><span class=3D"pre">y=3D</span></code>=
+ above) or class names
+(recognized by the =E2=80=9C(=E2=80=A6)=E2=80=9D next to them like <code cl=
+ass=3D"docutils literal notranslate"><span class=3D"pre">Point</span></code=
+> above) are never assigned to.</p>
+<p>Patterns can be arbitrarily nested.  For example, if we have a short
+list of points, we could match it like this:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">match</span> <=
+span class=3D"n">points</span><span class=3D"p">:</span>
+    <span class=3D"k">case</span> <span class=3D"p">[]:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"s2">"No points"</span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"p">[</span><span class=3D"=
+n">Point</span><span class=3D"p">(</span><span class=3D"mi">0</span><span c=
+lass=3D"p">,</span> <span class=3D"mi">0</span><span class=3D"p">)]:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"s2">"The origin"</span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"p">[</span><span class=3D"=
+n">Point</span><span class=3D"p">(</span><span class=3D"n">x</span><span cl=
+ass=3D"p">,</span> <span class=3D"n">y</span><span class=3D"p">)]:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"sa">f</span><span class=3D"s2">"Single point </span><span class=3D"si"=
+>{</span><span class=3D"n">x</span><span class=3D"si">}</span><span class=
+=3D"s2">, </span><span class=3D"si">{</span><span class=3D"n">y</span><span=
+ class=3D"si">}</span><span class=3D"s2">"</span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"p">[</span><span class=3D"=
+n">Point</span><span class=3D"p">(</span><span class=3D"mi">0</span><span c=
+lass=3D"p">,</span> <span class=3D"n">y1</span><span class=3D"p">),</span> =
+<span class=3D"n">Point</span><span class=3D"p">(</span><span class=3D"mi">=
+0</span><span class=3D"p">,</span> <span class=3D"n">y2</span><span class=
+=3D"p">)]:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"sa">f</span><span class=3D"s2">"Two on the Y axis at </span><span clas=
+s=3D"si">{</span><span class=3D"n">y1</span><span class=3D"si">}</span><spa=
+n class=3D"s2">, </span><span class=3D"si">{</span><span class=3D"n">y2</sp=
+an><span class=3D"si">}</span><span class=3D"s2">"</span><span class=3D"p">=
+)</span>
+    <span class=3D"k">case</span> <span class=3D"k">_</span><span class=3D"=
+p">:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"s2">"Something else"</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>We can add an <code class=3D"docutils literal notranslate"><span class=
+=3D"pre">if</span></code> clause to a pattern, known as a =E2=80=9Cguard=E2=
+=80=9D.  If the
+guard is false, <code class=3D"docutils literal notranslate"><span class=3D=
+"pre">match</span></code> goes on to try the next case block.  Note
+that value capture happens before the guard is evaluated:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">match</span> <=
+span class=3D"n">point</span><span class=3D"p">:</span>
+    <span class=3D"k">case</span> <span class=3D"n">Point</span><span class=
+=3D"p">(</span><span class=3D"n">x</span><span class=3D"p">,</span> <span c=
+lass=3D"n">y</span><span class=3D"p">)</span> <span class=3D"k">if</span> <=
+span class=3D"n">x</span> <span class=3D"o">=3D=3D</span> <span class=3D"n"=
+>y</span><span class=3D"p">:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"sa">f</span><span class=3D"s2">"Y=3DX at </span><span class=3D"si">{</=
+span><span class=3D"n">x</span><span class=3D"si">}</span><span class=3D"s2=
+">"</span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"n">Point</span><span class=
+=3D"p">(</span><span class=3D"n">x</span><span class=3D"p">,</span> <span c=
+lass=3D"n">y</span><span class=3D"p">):</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"sa">f</span><span class=3D"s2">"Not on the diagonal"</span><span class=
+=3D"p">)</span>
+</pre></div>
+</div>
+<p>Several other key features of this statement:</p>
+<ul>
+<li><p>Like unpacking assignments, tuple and list patterns have exactly the
+same meaning and actually match arbitrary sequences.  An important
+exception is that they don=E2=80=99t match iterators or strings.</p></li>
+<li><p>Sequence patterns support extended unpacking: <code class=3D"docutil=
+s literal notranslate"><span class=3D"pre">[x,</span> <span class=3D"pre">y=
+,</span> <span class=3D"pre">*rest]</span></code> and <code class=3D"docuti=
+ls literal notranslate"><span class=3D"pre">(x,</span> <span class=3D"pre">=
+y,</span>
+<span class=3D"pre">*rest)</span></code> work similar to unpacking assignme=
+nts.  The
+name after <code class=3D"docutils literal notranslate"><span class=3D"pre"=
+>*</span></code> may also be <code class=3D"docutils literal notranslate"><=
+span class=3D"pre">_</span></code>, so <code class=3D"docutils literal notr=
+anslate"><span class=3D"pre">(x,</span> <span class=3D"pre">y,</span> <span=
+ class=3D"pre">*_)</span></code> matches a sequence
+of at least two items without binding the remaining items.</p></li>
+<li><p>Mapping patterns: <code class=3D"docutils literal notranslate"><span=
+ class=3D"pre">{"bandwidth":</span> <span class=3D"pre">b,</span> <span cla=
+ss=3D"pre">"latency":</span> <span class=3D"pre">l}</span></code> captures =
+the
+<code class=3D"docutils literal notranslate"><span class=3D"pre">"bandwidth=
+"</span></code> and <code class=3D"docutils literal notranslate"><span clas=
+s=3D"pre">"latency"</span></code> values from a dictionary.  Unlike sequenc=
+e
+patterns, extra keys are ignored.  An unpacking like <code class=3D"docutil=
+s literal notranslate"><span class=3D"pre">**rest</span></code> is also
+supported.  (But <code class=3D"docutils literal notranslate"><span class=
+=3D"pre">**_</span></code> would be redundant, so it is not allowed.)</p></=
+li>
+<li><p>Subpatterns may be captured using the <code class=3D"docutils litera=
+l notranslate"><span class=3D"pre">as</span></code> keyword:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">case</span> <s=
+pan class=3D"p">(</span><span class=3D"n">Point</span><span class=3D"p">(</=
+span><span class=3D"n">x1</span><span class=3D"p">,</span> <span class=3D"n=
+">y1</span><span class=3D"p">),</span> <span class=3D"n">Point</span><span =
+class=3D"p">(</span><span class=3D"n">x2</span><span class=3D"p">,</span> <=
+span class=3D"n">y2</span><span class=3D"p">)</span> <span class=3D"k">as</=
+span> <span class=3D"n">p2</span><span class=3D"p">):</span> <span class=3D=
+"o">...</span>
+</pre></div>
+</div>
+<p>will capture the second element of the input as <code class=3D"docutils =
+literal notranslate"><span class=3D"pre">p2</span></code> (as long as the i=
+nput is
+a sequence of two points)</p>
+</li>
+<li><p>Most literals are compared by equality, however the singletons <code=
+ class=3D"docutils literal notranslate"><span class=3D"pre">True</span></co=
+de>,
+<code class=3D"docutils literal notranslate"><span class=3D"pre">False</spa=
+n></code> and <code class=3D"docutils literal notranslate"><span class=3D"p=
+re">None</span></code> are compared by identity.</p></li>
+<li><p>Patterns may use named constants.  These must be dotted names
+to prevent them from being interpreted as capture variable:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"kn">from</span> <=
+span class=3D"nn">enum</span> <span class=3D"kn">import</span> <span class=
+=3D"n">Enum</span>
+<span class=3D"k">class</span> <span class=3D"nc">Color</span><span class=
+=3D"p">(</span><span class=3D"n">Enum</span><span class=3D"p">):</span>
+    <span class=3D"n">RED</span> <span class=3D"o">=3D</span> <span class=
+=3D"s1">'red'</span>
+    <span class=3D"n">GREEN</span> <span class=3D"o">=3D</span> <span class=
+=3D"s1">'green'</span>
+    <span class=3D"n">BLUE</span> <span class=3D"o">=3D</span> <span class=
+=3D"s1">'blue'</span>
+
+<span class=3D"n">color</span> <span class=3D"o">=3D</span> <span class=3D"=
+n">Color</span><span class=3D"p">(</span><span class=3D"nb">input</span><sp=
+an class=3D"p">(</span><span class=3D"s2">"Enter your choice of 'red', 'blu=
+e' or 'green': "</span><span class=3D"p">))</span>
+
+<span class=3D"k">match</span> <span class=3D"n">color</span><span class=3D=
+"p">:</span>
+    <span class=3D"k">case</span> <span class=3D"n">Color</span><span class=
+=3D"o">.</span><span class=3D"n">RED</span><span class=3D"p">:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"s2">"I see red!"</span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"n">Color</span><span class=
+=3D"o">.</span><span class=3D"n">GREEN</span><span class=3D"p">:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"s2">"Grass is green"</span><span class=3D"p">)</span>
+    <span class=3D"k">case</span> <span class=3D"n">Color</span><span class=
+=3D"o">.</span><span class=3D"n">BLUE</span><span class=3D"p">:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"s2">"I'm feeling the blues :("</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>For a more detailed explanation and additional examples, you can look in=
+to
+<span class=3D"target" id=3D"index-1"></span><a class=3D"pep reference exte=
+rnal" href=3D"https://peps.python.org/pep-0636/"><strong>PEP 636</strong></=
+a> which is written in a tutorial format.</p>
+</section>
+<section id=3D"defining-functions">
+<span id=3D"tut-functions"></span><h2><span class=3D"section-number">4.7. <=
+/span>Defining Functions<a class=3D"headerlink" href=3D"https://docs.python=
+.org/3/tutorial/controlflow.html#defining-functions" title=3D"Permalink to =
+this headline">=C2=B6</a></h2>
+<p>We can create a function that writes the Fibonacci series to an arbitrar=
+y
+boundary:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">fib</span><span class=3D"p">(</span=
+><span class=3D"n">n</span><span class=3D"p">):</span>    <span class=3D"c1=
+"># write Fibonacci series up to n</span>
+<span class=3D"gp">... </span>    <span class=3D"sd">"""Print a Fibonacci s=
+eries up to n."""</span>
+<span class=3D"gp">... </span>    <span class=3D"n">a</span><span class=3D"=
+p">,</span> <span class=3D"n">b</span> <span class=3D"o">=3D</span> <span c=
+lass=3D"mi">0</span><span class=3D"p">,</span> <span class=3D"mi">1</span>
+<span class=3D"gp">... </span>    <span class=3D"k">while</span> <span clas=
+s=3D"n">a</span> <span class=3D"o">&lt;</span> <span class=3D"n">n</span><s=
+pan class=3D"p">:</span>
+<span class=3D"gp">... </span>        <span class=3D"nb">print</span><span =
+class=3D"p">(</span><span class=3D"n">a</span><span class=3D"p">,</span> <s=
+pan class=3D"n">end</span><span class=3D"o">=3D</span><span class=3D"s1">' =
+'</span><span class=3D"p">)</span>
+<span class=3D"gp">... </span>        <span class=3D"n">a</span><span class=
+=3D"p">,</span> <span class=3D"n">b</span> <span class=3D"o">=3D</span> <sp=
+an class=3D"n">b</span><span class=3D"p">,</span> <span class=3D"n">a</span=
+><span class=3D"o">+</span><span class=3D"n">b</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">()</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"c1"># Now call the fu=
+nction we just defined:</span>
+<span class=3D"gp">... </span><span class=3D"n">fib</span><span class=3D"p"=
+>(</span><span class=3D"mi">2000</span><span class=3D"p">)</span>
+<span class=3D"go">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597</s=
+pan>
+</pre></div>
+</div>
+<p id=3D"index-2">The keyword <a class=3D"reference internal" href=3D"https=
+://docs.python.org/3/reference/compound_stmts.html#def"><code class=3D"xref=
+ std std-keyword docutils literal notranslate"><span class=3D"pre">def</spa=
+n></code></a> introduces a function <em>definition</em>.  It must be
+followed by the function name and the parenthesized list of formal paramete=
+rs.
+The statements that form the body of the function start at the next line, a=
+nd
+must be indented.</p>
+<p>The first statement of the function body can optionally be a string lite=
+ral;
+this string literal is the function=E2=80=99s documentation string, or <em =
+class=3D"dfn">docstring</em>.
+(More about docstrings can be found in the section <a class=3D"reference in=
+ternal" href=3D"https://docs.python.org/3/tutorial/controlflow.html#tut-doc=
+strings"><span class=3D"std std-ref">Documentation Strings</span></a>.)
+There are tools which use docstrings to automatically produce online or pri=
+nted
+documentation, or to let the user interactively browse through code; it=E2=
+=80=99s good
+practice to include docstrings in code that you write, so make a habit of i=
+t.</p>
+<p>The <em>execution</em> of a function introduces a new symbol table used =
+for the local
+variables of the function.  More precisely, all variable assignments in a
+function store the value in the local symbol table; whereas variable refere=
+nces
+first look in the local symbol table, then in the local symbol tables of
+enclosing functions, then in the global symbol table, and finally in the ta=
+ble
+of built-in names. Thus, global variables and variables of enclosing functi=
+ons
+cannot be directly assigned a value within a function (unless, for global
+variables, named in a <a class=3D"reference internal" href=3D"https://docs.=
+python.org/3/reference/simple_stmts.html#global"><code class=3D"xref std st=
+d-keyword docutils literal notranslate"><span class=3D"pre">global</span></=
+code></a> statement, or, for variables of enclosing
+functions, named in a <a class=3D"reference internal" href=3D"https://docs.=
+python.org/3/reference/simple_stmts.html#nonlocal"><code class=3D"xref std =
+std-keyword docutils literal notranslate"><span class=3D"pre">nonlocal</spa=
+n></code></a> statement), although they may be
+referenced.</p>
+<p>The actual parameters (arguments) to a function call are introduced in t=
+he local
+symbol table of the called function when it is called; thus, arguments are
+passed using <em>call by value</em> (where the <em>value</em> is always an =
+object <em>reference</em>,
+not the value of the object). <a class=3D"footnote-reference brackets" href=
+=3D"https://docs.python.org/3/tutorial/controlflow.html#id2" id=3D"id1">1</=
+a> When a function calls another function,
+or calls itself recursively, a new
+local symbol table is created for that call.</p>
+<p>A function definition associates the function name with the function obj=
+ect in
+the current symbol table.  The interpreter recognizes the object pointed to=
+ by
+that name as a user-defined function.  Other names can also point to that s=
+ame
+function object and can also be used to access the function:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">fib</span>
+<span class=3D"go">&lt;function fib at 10042ed0&gt;</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">f</span> <span cla=
+ss=3D"o">=3D</span> <span class=3D"n">fib</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">f</span><span clas=
+s=3D"p">(</span><span class=3D"mi">100</span><span class=3D"p">)</span>
+<span class=3D"go">0 1 1 2 3 5 8 13 21 34 55 89</span>
+</pre></div>
+</div>
+<p>Coming from other languages, you might object that <code class=3D"docuti=
+ls literal notranslate"><span class=3D"pre">fib</span></code> is not a func=
+tion but
+a procedure since it doesn=E2=80=99t return a value.  In fact, even functio=
+ns without a
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/reference=
+/simple_stmts.html#return"><code class=3D"xref std std-keyword docutils lit=
+eral notranslate"><span class=3D"pre">return</span></code></a> statement do=
+ return a value, albeit a rather boring one.  This
+value is called <code class=3D"docutils literal notranslate"><span class=3D=
+"pre">None</span></code> (it=E2=80=99s a built-in name).  Writing the value=
+ <code class=3D"docutils literal notranslate"><span class=3D"pre">None</spa=
+n></code> is
+normally suppressed by the interpreter if it would be the only value writte=
+n.
+You can see it if you really want to using <a class=3D"reference internal" =
+href=3D"https://docs.python.org/3/library/functions.html#print" title=3D"pr=
+int"><code class=3D"xref py py-func docutils literal notranslate"><span cla=
+ss=3D"pre">print()</span></code></a>:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">fib</span><span class=3D"p">(</span><span class=3D"mi">0</span><s=
+pan class=3D"p">)</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"nb">print</span><span=
+ class=3D"p">(</span><span class=3D"n">fib</span><span class=3D"p">(</span>=
+<span class=3D"mi">0</span><span class=3D"p">))</span>
+<span class=3D"go">None</span>
+</pre></div>
+</div>
+<p>It is simple to write a function that returns a list of the numbers of t=
+he
+Fibonacci series, instead of printing it:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">fib2</span><span class=3D"p">(</spa=
+n><span class=3D"n">n</span><span class=3D"p">):</span>  <span class=3D"c1"=
+># return Fibonacci series up to n</span>
+<span class=3D"gp">... </span>    <span class=3D"sd">"""Return a list conta=
+ining the Fibonacci series up to n."""</span>
+<span class=3D"gp">... </span>    <span class=3D"n">result</span> <span cla=
+ss=3D"o">=3D</span> <span class=3D"p">[]</span>
+<span class=3D"gp">... </span>    <span class=3D"n">a</span><span class=3D"=
+p">,</span> <span class=3D"n">b</span> <span class=3D"o">=3D</span> <span c=
+lass=3D"mi">0</span><span class=3D"p">,</span> <span class=3D"mi">1</span>
+<span class=3D"gp">... </span>    <span class=3D"k">while</span> <span clas=
+s=3D"n">a</span> <span class=3D"o">&lt;</span> <span class=3D"n">n</span><s=
+pan class=3D"p">:</span>
+<span class=3D"gp">... </span>        <span class=3D"n">result</span><span =
+class=3D"o">.</span><span class=3D"n">append</span><span class=3D"p">(</spa=
+n><span class=3D"n">a</span><span class=3D"p">)</span>    <span class=3D"c1=
+"># see below</span>
+<span class=3D"gp">... </span>        <span class=3D"n">a</span><span class=
+=3D"p">,</span> <span class=3D"n">b</span> <span class=3D"o">=3D</span> <sp=
+an class=3D"n">b</span><span class=3D"p">,</span> <span class=3D"n">a</span=
+><span class=3D"o">+</span><span class=3D"n">b</span>
+<span class=3D"gp">... </span>    <span class=3D"k">return</span> <span cla=
+ss=3D"n">result</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">f100</span> <span =
+class=3D"o">=3D</span> <span class=3D"n">fib2</span><span class=3D"p">(</sp=
+an><span class=3D"mi">100</span><span class=3D"p">)</span>    <span class=
+=3D"c1"># call it</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">f100</span>       =
+         <span class=3D"c1"># write the result</span>
+<span class=3D"go">[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]</span>
+</pre></div>
+</div>
+<p>This example, as usual, demonstrates some new Python features:</p>
+<ul class=3D"simple">
+<li><p>The <a class=3D"reference internal" href=3D"https://docs.python.org/=
+3/reference/simple_stmts.html#return"><code class=3D"xref std std-keyword d=
+ocutils literal notranslate"><span class=3D"pre">return</span></code></a> s=
+tatement returns with a value from a function.
+<code class=3D"xref std std-keyword docutils literal notranslate"><span cla=
+ss=3D"pre">return</span></code> without an expression argument returns <cod=
+e class=3D"docutils literal notranslate"><span class=3D"pre">None</span></c=
+ode>. Falling off
+the end of a function also returns <code class=3D"docutils literal notransl=
+ate"><span class=3D"pre">None</span></code>.</p></li>
+<li><p>The statement <code class=3D"docutils literal notranslate"><span cla=
+ss=3D"pre">result.append(a)</span></code> calls a <em>method</em> of the li=
+st object
+<code class=3D"docutils literal notranslate"><span class=3D"pre">result</sp=
+an></code>.  A method is a function that =E2=80=98belongs=E2=80=99 to an ob=
+ject and is named
+<code class=3D"docutils literal notranslate"><span class=3D"pre">obj.method=
+name</span></code>, where <code class=3D"docutils literal notranslate"><spa=
+n class=3D"pre">obj</span></code> is some object (this may be an expression=
+),
+and <code class=3D"docutils literal notranslate"><span class=3D"pre">method=
+name</span></code> is the name of a method that is defined by the object=E2=
+=80=99s type.
+Different types define different methods.  Methods of different types may h=
+ave
+the same name without causing ambiguity.  (It is possible to define your ow=
+n
+object types and methods, using <em>classes</em>, see <a class=3D"reference=
+ internal" href=3D"https://docs.python.org/3/tutorial/classes.html#tut-clas=
+ses"><span class=3D"std std-ref">Classes</span></a>)
+The method <code class=3D"xref py py-meth docutils literal notranslate"><sp=
+an class=3D"pre">append()</span></code> shown in the example is defined for=
+ list objects; it
+adds a new element at the end of the list.  In this example it is equivalen=
+t to
+<code class=3D"docutils literal notranslate"><span class=3D"pre">result</sp=
+an> <span class=3D"pre">=3D</span> <span class=3D"pre">result</span> <span =
+class=3D"pre">+</span> <span class=3D"pre">[a]</span></code>, but more effi=
+cient.</p></li>
+</ul>
+</section>
+<section id=3D"more-on-defining-functions">
+<span id=3D"tut-defining"></span><h2><span class=3D"section-number">4.8. </=
+span>More on Defining Functions<a class=3D"headerlink" href=3D"https://docs=
+.python.org/3/tutorial/controlflow.html#more-on-defining-functions" title=
+=3D"Permalink to this headline">=C2=B6</a></h2>
+<p>It is also possible to define functions with a variable number of argume=
+nts.
+There are three forms, which can be combined.</p>
+<section id=3D"default-argument-values">
+<span id=3D"tut-defaultargs"></span><h3><span class=3D"section-number">4.8.=
+1. </span>Default Argument Values<a class=3D"headerlink" href=3D"https://do=
+cs.python.org/3/tutorial/controlflow.html#default-argument-values" title=3D=
+"Permalink to this headline">=C2=B6</a></h3>
+<p>The most useful form is to specify a default value for one or more argum=
+ents.
+This creates a function that can be called with fewer arguments than it is
+defined to allow.  For example:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">def</span> <sp=
+an class=3D"nf">ask_ok</span><span class=3D"p">(</span><span class=3D"n">pr=
+ompt</span><span class=3D"p">,</span> <span class=3D"n">retries</span><span=
+ class=3D"o">=3D</span><span class=3D"mi">4</span><span class=3D"p">,</span=
+> <span class=3D"n">reminder</span><span class=3D"o">=3D</span><span class=
+=3D"s1">'Please try again!'</span><span class=3D"p">):</span>
+    <span class=3D"k">while</span> <span class=3D"kc">True</span><span clas=
+s=3D"p">:</span>
+        <span class=3D"n">ok</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"nb">input</span><span class=3D"p">(</span><span class=3D"n">prompt</sp=
+an><span class=3D"p">)</span>
+        <span class=3D"k">if</span> <span class=3D"n">ok</span> <span class=
+=3D"ow">in</span> <span class=3D"p">(</span><span class=3D"s1">'y'</span><s=
+pan class=3D"p">,</span> <span class=3D"s1">'ye'</span><span class=3D"p">,<=
+/span> <span class=3D"s1">'yes'</span><span class=3D"p">):</span>
+            <span class=3D"k">return</span> <span class=3D"kc">True</span>
+        <span class=3D"k">if</span> <span class=3D"n">ok</span> <span class=
+=3D"ow">in</span> <span class=3D"p">(</span><span class=3D"s1">'n'</span><s=
+pan class=3D"p">,</span> <span class=3D"s1">'no'</span><span class=3D"p">,<=
+/span> <span class=3D"s1">'nop'</span><span class=3D"p">,</span> <span clas=
+s=3D"s1">'nope'</span><span class=3D"p">):</span>
+            <span class=3D"k">return</span> <span class=3D"kc">False</span>
+        <span class=3D"n">retries</span> <span class=3D"o">=3D</span> <span=
+ class=3D"n">retries</span> <span class=3D"o">-</span> <span class=3D"mi">1=
+</span>
+        <span class=3D"k">if</span> <span class=3D"n">retries</span> <span =
+class=3D"o">&lt;</span> <span class=3D"mi">0</span><span class=3D"p">:</spa=
+n>
+            <span class=3D"k">raise</span> <span class=3D"ne">ValueError</s=
+pan><span class=3D"p">(</span><span class=3D"s1">'invalid user response'</s=
+pan><span class=3D"p">)</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"n">reminder</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>This function can be called in several ways:</p>
+<ul class=3D"simple">
+<li><p>giving only the mandatory argument:
+<code class=3D"docutils literal notranslate"><span class=3D"pre">ask_ok('Do=
+</span> <span class=3D"pre">you</span> <span class=3D"pre">really</span> <s=
+pan class=3D"pre">want</span> <span class=3D"pre">to</span> <span class=3D"=
+pre">quit?')</span></code></p></li>
+<li><p>giving one of the optional arguments:
+<code class=3D"docutils literal notranslate"><span class=3D"pre">ask_ok('OK=
+</span> <span class=3D"pre">to</span> <span class=3D"pre">overwrite</span> =
+<span class=3D"pre">the</span> <span class=3D"pre">file?',</span> <span cla=
+ss=3D"pre">2)</span></code></p></li>
+<li><p>or even giving all arguments:
+<code class=3D"docutils literal notranslate"><span class=3D"pre">ask_ok('OK=
+</span> <span class=3D"pre">to</span> <span class=3D"pre">overwrite</span> =
+<span class=3D"pre">the</span> <span class=3D"pre">file?',</span> <span cla=
+ss=3D"pre">2,</span> <span class=3D"pre">'Come</span> <span class=3D"pre">o=
+n,</span> <span class=3D"pre">only</span> <span class=3D"pre">yes</span> <s=
+pan class=3D"pre">or</span> <span class=3D"pre">no!')</span></code></p></li=
+>
+</ul>
+<p>This example also introduces the <a class=3D"reference internal" href=3D=
+"https://docs.python.org/3/reference/expressions.html#in"><code class=3D"xr=
+ef std std-keyword docutils literal notranslate"><span class=3D"pre">in</sp=
+an></code></a> keyword. This tests whether or
+not a sequence contains a certain value.</p>
+<p>The default values are evaluated at the point of function definition in =
+the
+<em>defining</em> scope, so that</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"n">i</span> <span=
+ class=3D"o">=3D</span> <span class=3D"mi">5</span>
+
+<span class=3D"k">def</span> <span class=3D"nf">f</span><span class=3D"p">(=
+</span><span class=3D"n">arg</span><span class=3D"o">=3D</span><span class=
+=3D"n">i</span><span class=3D"p">):</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"n">arg</span><span class=3D"p">)</span>
+
+<span class=3D"n">i</span> <span class=3D"o">=3D</span> <span class=3D"mi">=
+6</span>
+<span class=3D"n">f</span><span class=3D"p">()</span>
+</pre></div>
+</div>
+<p>will print <code class=3D"docutils literal notranslate"><span class=3D"p=
+re">5</span></code>.</p>
+<p><strong>Important warning:</strong>  The default value is evaluated only=
+ once. This makes a
+difference when the default is a mutable object such as a list, dictionary,=
+ or
+instances of most classes.  For example, the following function accumulates=
+ the
+arguments passed to it on subsequent calls:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">def</span> <sp=
+an class=3D"nf">f</span><span class=3D"p">(</span><span class=3D"n">a</span=
+><span class=3D"p">,</span> <span class=3D"n">L</span><span class=3D"o">=3D=
+</span><span class=3D"p">[]):</span>
+    <span class=3D"n">L</span><span class=3D"o">.</span><span class=3D"n">a=
+ppend</span><span class=3D"p">(</span><span class=3D"n">a</span><span class=
+=3D"p">)</span>
+    <span class=3D"k">return</span> <span class=3D"n">L</span>
+
+<span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D"n">=
+f</span><span class=3D"p">(</span><span class=3D"mi">1</span><span class=3D=
+"p">))</span>
+<span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D"n">=
+f</span><span class=3D"p">(</span><span class=3D"mi">2</span><span class=3D=
+"p">))</span>
+<span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D"n">=
+f</span><span class=3D"p">(</span><span class=3D"mi">3</span><span class=3D=
+"p">))</span>
+</pre></div>
+</div>
+<p>This will print</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"p">[</span><span =
+class=3D"mi">1</span><span class=3D"p">]</span>
+<span class=3D"p">[</span><span class=3D"mi">1</span><span class=3D"p">,</s=
+pan> <span class=3D"mi">2</span><span class=3D"p">]</span>
+<span class=3D"p">[</span><span class=3D"mi">1</span><span class=3D"p">,</s=
+pan> <span class=3D"mi">2</span><span class=3D"p">,</span> <span class=3D"m=
+i">3</span><span class=3D"p">]</span>
+</pre></div>
+</div>
+<p>If you don=E2=80=99t want the default to be shared between subsequent ca=
+lls, you can
+write the function like this instead:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">def</span> <sp=
+an class=3D"nf">f</span><span class=3D"p">(</span><span class=3D"n">a</span=
+><span class=3D"p">,</span> <span class=3D"n">L</span><span class=3D"o">=3D=
+</span><span class=3D"kc">None</span><span class=3D"p">):</span>
+    <span class=3D"k">if</span> <span class=3D"n">L</span> <span class=3D"o=
+w">is</span> <span class=3D"kc">None</span><span class=3D"p">:</span>
+        <span class=3D"n">L</span> <span class=3D"o">=3D</span> <span class=
+=3D"p">[]</span>
+    <span class=3D"n">L</span><span class=3D"o">.</span><span class=3D"n">a=
+ppend</span><span class=3D"p">(</span><span class=3D"n">a</span><span class=
+=3D"p">)</span>
+    <span class=3D"k">return</span> <span class=3D"n">L</span>
+</pre></div>
+</div>
+</section>
+<section id=3D"keyword-arguments">
+<span id=3D"tut-keywordargs"></span><h3><span class=3D"section-number">4.8.=
+2. </span>Keyword Arguments<a class=3D"headerlink" href=3D"https://docs.pyt=
+hon.org/3/tutorial/controlflow.html#keyword-arguments" title=3D"Permalink t=
+o this headline">=C2=B6</a></h3>
+<p>Functions can also be called using <a class=3D"reference internal" href=
+=3D"https://docs.python.org/3/glossary.html#term-keyword-argument"><span cl=
+ass=3D"xref std std-term">keyword arguments</span></a>
+of the form <code class=3D"docutils literal notranslate"><span class=3D"pre=
+">kwarg=3Dvalue</span></code>.  For instance, the following function:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">def</span> <sp=
+an class=3D"nf">parrot</span><span class=3D"p">(</span><span class=3D"n">vo=
+ltage</span><span class=3D"p">,</span> <span class=3D"n">state</span><span =
+class=3D"o">=3D</span><span class=3D"s1">'a stiff'</span><span class=3D"p">=
+,</span> <span class=3D"n">action</span><span class=3D"o">=3D</span><span c=
+lass=3D"s1">'voom'</span><span class=3D"p">,</span> <span class=3D"nb">type=
+</span><span class=3D"o">=3D</span><span class=3D"s1">'Norwegian Blue'</spa=
+n><span class=3D"p">):</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"s2">"-- This parrot wouldn't"</span><span class=3D"p">,</span> <span class=
+=3D"n">action</span><span class=3D"p">,</span> <span class=3D"n">end</span>=
+<span class=3D"o">=3D</span><span class=3D"s1">' '</span><span class=3D"p">=
+)</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"s2">"if you put"</span><span class=3D"p">,</span> <span class=3D"n">voltag=
+e</span><span class=3D"p">,</span> <span class=3D"s2">"volts through it."</=
+span><span class=3D"p">)</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"s2">"-- Lovely plumage, the"</span><span class=3D"p">,</span> <span class=
+=3D"nb">type</span><span class=3D"p">)</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"s2">"-- It's"</span><span class=3D"p">,</span> <span class=3D"n">state</sp=
+an><span class=3D"p">,</span> <span class=3D"s2">"!"</span><span class=3D"p=
+">)</span>
+</pre></div>
+</div>
+<p>accepts one required argument (<code class=3D"docutils literal notransla=
+te"><span class=3D"pre">voltage</span></code>) and three optional arguments
+(<code class=3D"docutils literal notranslate"><span class=3D"pre">state</sp=
+an></code>, <code class=3D"docutils literal notranslate"><span class=3D"pre=
+">action</span></code>, and <code class=3D"docutils literal notranslate"><s=
+pan class=3D"pre">type</span></code>).  This function can be called in any
+of the following ways:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"n">parrot</span><=
+span class=3D"p">(</span><span class=3D"mi">1000</span><span class=3D"p">)<=
+/span>                                          <span class=3D"c1"># 1 posi=
+tional argument</span>
+<span class=3D"n">parrot</span><span class=3D"p">(</span><span class=3D"n">=
+voltage</span><span class=3D"o">=3D</span><span class=3D"mi">1000</span><sp=
+an class=3D"p">)</span>                                  <span class=3D"c1"=
+># 1 keyword argument</span>
+<span class=3D"n">parrot</span><span class=3D"p">(</span><span class=3D"n">=
+voltage</span><span class=3D"o">=3D</span><span class=3D"mi">1000000</span>=
+<span class=3D"p">,</span> <span class=3D"n">action</span><span class=3D"o"=
+>=3D</span><span class=3D"s1">'VOOOOOM'</span><span class=3D"p">)</span>   =
+          <span class=3D"c1"># 2 keyword arguments</span>
+<span class=3D"n">parrot</span><span class=3D"p">(</span><span class=3D"n">=
+action</span><span class=3D"o">=3D</span><span class=3D"s1">'VOOOOOM'</span=
+><span class=3D"p">,</span> <span class=3D"n">voltage</span><span class=3D"=
+o">=3D</span><span class=3D"mi">1000000</span><span class=3D"p">)</span>   =
+          <span class=3D"c1"># 2 keyword arguments</span>
+<span class=3D"n">parrot</span><span class=3D"p">(</span><span class=3D"s1"=
+>'a million'</span><span class=3D"p">,</span> <span class=3D"s1">'bereft of=
+ life'</span><span class=3D"p">,</span> <span class=3D"s1">'jump'</span><sp=
+an class=3D"p">)</span>         <span class=3D"c1"># 3 positional arguments=
+</span>
+<span class=3D"n">parrot</span><span class=3D"p">(</span><span class=3D"s1"=
+>'a thousand'</span><span class=3D"p">,</span> <span class=3D"n">state</spa=
+n><span class=3D"o">=3D</span><span class=3D"s1">'pushing up the daisies'</=
+span><span class=3D"p">)</span>  <span class=3D"c1"># 1 positional, 1 keywo=
+rd</span>
+</pre></div>
+</div>
+<p>but all the following calls would be invalid:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"n">parrot</span><=
+span class=3D"p">()</span>                     <span class=3D"c1"># require=
+d argument missing</span>
+<span class=3D"n">parrot</span><span class=3D"p">(</span><span class=3D"n">=
+voltage</span><span class=3D"o">=3D</span><span class=3D"mf">5.0</span><spa=
+n class=3D"p">,</span> <span class=3D"s1">'dead'</span><span class=3D"p">)<=
+/span>  <span class=3D"c1"># non-keyword argument after a keyword argument<=
+/span>
+<span class=3D"n">parrot</span><span class=3D"p">(</span><span class=3D"mi"=
+>110</span><span class=3D"p">,</span> <span class=3D"n">voltage</span><span=
+ class=3D"o">=3D</span><span class=3D"mi">220</span><span class=3D"p">)</sp=
+an>     <span class=3D"c1"># duplicate value for the same argument</span>
+<span class=3D"n">parrot</span><span class=3D"p">(</span><span class=3D"n">=
+actor</span><span class=3D"o">=3D</span><span class=3D"s1">'John Cleese'</s=
+pan><span class=3D"p">)</span>  <span class=3D"c1"># unknown keyword argume=
+nt</span>
+</pre></div>
+</div>
+<p>In a function call, keyword arguments must follow positional arguments.
+All the keyword arguments passed must match one of the arguments
+accepted by the function (e.g. <code class=3D"docutils literal notranslate"=
+><span class=3D"pre">actor</span></code> is not a valid argument for the
+<code class=3D"docutils literal notranslate"><span class=3D"pre">parrot</sp=
+an></code> function), and their order is not important.  This also includes
+non-optional arguments (e.g. <code class=3D"docutils literal notranslate"><=
+span class=3D"pre">parrot(voltage=3D1000)</span></code> is valid too).
+No argument may receive a value more than once.
+Here=E2=80=99s an example that fails due to this restriction:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">function</span><span class=3D"p">(<=
+/span><span class=3D"n">a</span><span class=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"k">pass</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">function</span><sp=
+an class=3D"p">(</span><span class=3D"mi">0</span><span class=3D"p">,</span=
+> <span class=3D"n">a</span><span class=3D"o">=3D</span><span class=3D"mi">=
+0</span><span class=3D"p">)</span>
+<span class=3D"gt">Traceback (most recent call last):</span><span>
+  File </span><span class=3D"nb">"&lt;stdin&gt;"</span><span>, line </span>=
+<span class=3D"m">1</span><span>, in </span><span class=3D"n">&lt;module&gt=
+;</span>
+<span class=3D"gr">TypeError</span><span>: </span><span class=3D"n">functio=
+n() got multiple values for argument 'a'</span>
+</pre></div>
+</div>
+<p>When a final formal parameter of the form <code class=3D"docutils litera=
+l notranslate"><span class=3D"pre">**name</span></code> is present, it rece=
+ives a
+dictionary (see <a class=3D"reference internal" href=3D"https://docs.python=
+.org/3/library/stdtypes.html#typesmapping"><span class=3D"std std-ref">Mapp=
+ing Types =E2=80=94 dict</span></a>) containing all keyword arguments excep=
+t for
+those corresponding to a formal parameter.  This may be combined with a for=
+mal
+parameter of the form <code class=3D"docutils literal notranslate"><span cl=
+ass=3D"pre">*name</span></code> (described in the next subsection) which
+receives a <a class=3D"reference internal" href=3D"https://docs.python.org/=
+3/tutorial/datastructures.html#tut-tuples"><span class=3D"std std-ref">tupl=
+e</span></a> containing the positional
+arguments beyond the formal parameter list.  (<code class=3D"docutils liter=
+al notranslate"><span class=3D"pre">*name</span></code> must occur
+before <code class=3D"docutils literal notranslate"><span class=3D"pre">**n=
+ame</span></code>.) For example, if we define a function like this:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">def</span> <sp=
+an class=3D"nf">cheeseshop</span><span class=3D"p">(</span><span class=3D"n=
+">kind</span><span class=3D"p">,</span> <span class=3D"o">*</span><span cla=
+ss=3D"n">arguments</span><span class=3D"p">,</span> <span class=3D"o">**</s=
+pan><span class=3D"n">keywords</span><span class=3D"p">):</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"s2">"-- Do you have any"</span><span class=3D"p">,</span> <span class=3D"n=
+">kind</span><span class=3D"p">,</span> <span class=3D"s2">"?"</span><span =
+class=3D"p">)</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"s2">"-- I'm sorry, we're all out of"</span><span class=3D"p">,</span> <spa=
+n class=3D"n">kind</span><span class=3D"p">)</span>
+    <span class=3D"k">for</span> <span class=3D"n">arg</span> <span class=
+=3D"ow">in</span> <span class=3D"n">arguments</span><span class=3D"p">:</sp=
+an>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"n">arg</span><span class=3D"p">)</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"s2">"-"</span> <span class=3D"o">*</span> <span class=3D"mi">40</span><spa=
+n class=3D"p">)</span>
+    <span class=3D"k">for</span> <span class=3D"n">kw</span> <span class=3D=
+"ow">in</span> <span class=3D"n">keywords</span><span class=3D"p">:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"n">kw</span><span class=3D"p">,</span> <span class=3D"s2">":"</span><s=
+pan class=3D"p">,</span> <span class=3D"n">keywords</span><span class=3D"p"=
+>[</span><span class=3D"n">kw</span><span class=3D"p">])</span>
+</pre></div>
+</div>
+<p>It could be called like this:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"n">cheeseshop</sp=
+an><span class=3D"p">(</span><span class=3D"s2">"Limburger"</span><span cla=
+ss=3D"p">,</span> <span class=3D"s2">"It's very runny, sir."</span><span cl=
+ass=3D"p">,</span>
+           <span class=3D"s2">"It's really very, VERY runny, sir."</span><s=
+pan class=3D"p">,</span>
+           <span class=3D"n">shopkeeper</span><span class=3D"o">=3D</span><=
+span class=3D"s2">"Michael Palin"</span><span class=3D"p">,</span>
+           <span class=3D"n">client</span><span class=3D"o">=3D</span><span=
+ class=3D"s2">"John Cleese"</span><span class=3D"p">,</span>
+           <span class=3D"n">sketch</span><span class=3D"o">=3D</span><span=
+ class=3D"s2">"Cheese Shop Sketch"</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>and of course it would print:</p>
+<div class=3D"highlight-none notranslate"><div class=3D"highlight"><pre><sp=
+an></span>-- Do you have any Limburger ?
+-- I'm sorry, we're all out of Limburger
+It's very runny, sir.
+It's really very, VERY runny, sir.
+----------------------------------------
+shopkeeper : Michael Palin
+client : John Cleese
+sketch : Cheese Shop Sketch
+</pre></div>
+</div>
+<p>Note that the order in which the keyword arguments are printed is guaran=
+teed
+to match the order in which they were provided in the function call.</p>
+</section>
+<section id=3D"special-parameters">
+<h3><span class=3D"section-number">4.8.3. </span>Special parameters<a class=
+=3D"headerlink" href=3D"https://docs.python.org/3/tutorial/controlflow.html=
+#special-parameters" title=3D"Permalink to this headline">=C2=B6</a></h3>
+<p>By default, arguments may be passed to a Python function either by posit=
+ion
+or explicitly by keyword. For readability and performance, it makes sense t=
+o
+restrict the way arguments can be passed so that a developer need only look
+at the function definition to determine if items are passed by position, by
+position or keyword, or by keyword.</p>
+<p>A function definition may look like:</p>
+<div class=3D"highlight-none notranslate"><div class=3D"highlight"><pre><sp=
+an></span>def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+      -----------    ----------     ----------
+        |             |                  |
+        |        Positional or keyword   |
+        |                                - Keyword only
+         -- Positional only
+</pre></div>
+</div>
+<p>where <code class=3D"docutils literal notranslate"><span class=3D"pre">/=
+</span></code> and <code class=3D"docutils literal notranslate"><span class=
+=3D"pre">*</span></code> are optional. If used, these symbols indicate the =
+kind of
+parameter by how the arguments may be passed to the function:
+positional-only, positional-or-keyword, and keyword-only. Keyword parameter=
+s
+are also referred to as named parameters.</p>
+<section id=3D"positional-or-keyword-arguments">
+<h4><span class=3D"section-number">4.8.3.1. </span>Positional-or-Keyword Ar=
+guments<a class=3D"headerlink" href=3D"https://docs.python.org/3/tutorial/c=
+ontrolflow.html#positional-or-keyword-arguments" title=3D"Permalink to this=
+ headline">=C2=B6</a></h4>
+<p>If <code class=3D"docutils literal notranslate"><span class=3D"pre">/</s=
+pan></code> and <code class=3D"docutils literal notranslate"><span class=3D=
+"pre">*</span></code> are not present in the function definition, arguments=
+ may
+be passed to a function by position or by keyword.</p>
+</section>
+<section id=3D"positional-only-parameters">
+<h4><span class=3D"section-number">4.8.3.2. </span>Positional-Only Paramete=
+rs<a class=3D"headerlink" href=3D"https://docs.python.org/3/tutorial/contro=
+lflow.html#positional-only-parameters" title=3D"Permalink to this headline"=
+>=C2=B6</a></h4>
+<p>Looking at this in a bit more detail, it is possible to mark certain par=
+ameters
+as <em>positional-only</em>. If <em>positional-only</em>, the parameters=E2=
+=80=99 order matters, and
+the parameters cannot be passed by keyword. Positional-only parameters are
+placed before a <code class=3D"docutils literal notranslate"><span class=3D=
+"pre">/</span></code> (forward-slash). The <code class=3D"docutils literal =
+notranslate"><span class=3D"pre">/</span></code> is used to logically
+separate the positional-only parameters from the rest of the parameters.
+If there is no <code class=3D"docutils literal notranslate"><span class=3D"=
+pre">/</span></code> in the function definition, there are no positional-on=
+ly
+parameters.</p>
+<p>Parameters following the <code class=3D"docutils literal notranslate"><s=
+pan class=3D"pre">/</span></code> may be <em>positional-or-keyword</em> or =
+<em>keyword-only</em>.</p>
+</section>
+<section id=3D"keyword-only-arguments">
+<h4><span class=3D"section-number">4.8.3.3. </span>Keyword-Only Arguments<a=
+ class=3D"headerlink" href=3D"https://docs.python.org/3/tutorial/controlflo=
+w.html#keyword-only-arguments" title=3D"Permalink to this headline">=C2=B6<=
+/a></h4>
+<p>To mark parameters as <em>keyword-only</em>, indicating the parameters m=
+ust be passed
+by keyword argument, place an <code class=3D"docutils literal notranslate">=
+<span class=3D"pre">*</span></code> in the arguments list just before the f=
+irst
+<em>keyword-only</em> parameter.</p>
+</section>
+<section id=3D"function-examples">
+<h4><span class=3D"section-number">4.8.3.4. </span>Function Examples<a clas=
+s=3D"headerlink" href=3D"https://docs.python.org/3/tutorial/controlflow.htm=
+l#function-examples" title=3D"Permalink to this headline">=C2=B6</a></h4>
+<p>Consider the following example function definitions paying close attenti=
+on to the
+markers <code class=3D"docutils literal notranslate"><span class=3D"pre">/<=
+/span></code> and <code class=3D"docutils literal notranslate"><span class=
+=3D"pre">*</span></code>:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">standard_arg</span><span class=3D"p=
+">(</span><span class=3D"n">arg</span><span class=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"n">arg</span><span class=3D"p">)</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"k">def</span> <span c=
+lass=3D"nf">pos_only_arg</span><span class=3D"p">(</span><span class=3D"n">=
+arg</span><span class=3D"p">,</span> <span class=3D"o">/</span><span class=
+=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"n">arg</span><span class=3D"p">)</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"k">def</span> <span c=
+lass=3D"nf">kwd_only_arg</span><span class=3D"p">(</span><span class=3D"o">=
+*</span><span class=3D"p">,</span> <span class=3D"n">arg</span><span class=
+=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"n">arg</span><span class=3D"p">)</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"k">def</span> <span c=
+lass=3D"nf">combined_example</span><span class=3D"p">(</span><span class=3D=
+"n">pos_only</span><span class=3D"p">,</span> <span class=3D"o">/</span><sp=
+an class=3D"p">,</span> <span class=3D"n">standard</span><span class=3D"p">=
+,</span> <span class=3D"o">*</span><span class=3D"p">,</span> <span class=
+=3D"n">kwd_only</span><span class=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"n">pos_only</span><span class=3D"p">,</span>=
+ <span class=3D"n">standard</span><span class=3D"p">,</span> <span class=3D=
+"n">kwd_only</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>The first function definition, <code class=3D"docutils literal notransla=
+te"><span class=3D"pre">standard_arg</span></code>, the most familiar form,
+places no restrictions on the calling convention and arguments may be
+passed by position or keyword:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">standard_arg</span><span class=3D"p">(</span><span class=3D"mi">2=
+</span><span class=3D"p">)</span>
+<span class=3D"go">2</span>
+
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">standard_arg</span=
+><span class=3D"p">(</span><span class=3D"n">arg</span><span class=3D"o">=
+=3D</span><span class=3D"mi">2</span><span class=3D"p">)</span>
+<span class=3D"go">2</span>
+</pre></div>
+</div>
+<p>The second function <code class=3D"docutils literal notranslate"><span c=
+lass=3D"pre">pos_only_arg</span></code> is restricted to only use positiona=
+l
+parameters as there is a <code class=3D"docutils literal notranslate"><span=
+ class=3D"pre">/</span></code> in the function definition:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">pos_only_arg</span><span class=3D"p">(</span><span class=3D"mi">1=
+</span><span class=3D"p">)</span>
+<span class=3D"go">1</span>
+
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">pos_only_arg</span=
+><span class=3D"p">(</span><span class=3D"n">arg</span><span class=3D"o">=
+=3D</span><span class=3D"mi">1</span><span class=3D"p">)</span>
+<span class=3D"gt">Traceback (most recent call last):</span><span>
+  File </span><span class=3D"nb">"&lt;stdin&gt;"</span><span>, line </span>=
+<span class=3D"m">1</span><span>, in </span><span class=3D"n">&lt;module&gt=
+;</span>
+<span class=3D"gr">TypeError</span><span>: </span><span class=3D"n">pos_onl=
+y_arg() got some positional-only arguments passed as keyword arguments: 'ar=
+g'</span>
+</pre></div>
+</div>
+<p>The third function <code class=3D"docutils literal notranslate"><span cl=
+ass=3D"pre">kwd_only_args</span></code> only allows keyword arguments as in=
+dicated
+by a <code class=3D"docutils literal notranslate"><span class=3D"pre">*</sp=
+an></code> in the function definition:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">kwd_only_arg</span><span class=3D"p">(</span><span class=3D"mi">3=
+</span><span class=3D"p">)</span>
+<span class=3D"gt">Traceback (most recent call last):</span><span>
+  File </span><span class=3D"nb">"&lt;stdin&gt;"</span><span>, line </span>=
+<span class=3D"m">1</span><span>, in </span><span class=3D"n">&lt;module&gt=
+;</span>
+<span class=3D"gr">TypeError</span><span>: </span><span class=3D"n">kwd_onl=
+y_arg() takes 0 positional arguments but 1 was given</span>
+
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">kwd_only_arg</span=
+><span class=3D"p">(</span><span class=3D"n">arg</span><span class=3D"o">=
+=3D</span><span class=3D"mi">3</span><span class=3D"p">)</span>
+<span class=3D"go">3</span>
+</pre></div>
+</div>
+<p>And the last uses all three calling conventions in the same function
+definition:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">combined_example</span><span class=3D"p">(</span><span class=3D"m=
+i">1</span><span class=3D"p">,</span> <span class=3D"mi">2</span><span clas=
+s=3D"p">,</span> <span class=3D"mi">3</span><span class=3D"p">)</span>
+<span class=3D"gt">Traceback (most recent call last):</span><span>
+  File </span><span class=3D"nb">"&lt;stdin&gt;"</span><span>, line </span>=
+<span class=3D"m">1</span><span>, in </span><span class=3D"n">&lt;module&gt=
+;</span>
+<span class=3D"gr">TypeError</span><span>: </span><span class=3D"n">combine=
+d_example() takes 2 positional arguments but 3 were given</span>
+
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">combined_example</=
+span><span class=3D"p">(</span><span class=3D"mi">1</span><span class=3D"p"=
+>,</span> <span class=3D"mi">2</span><span class=3D"p">,</span> <span class=
+=3D"n">kwd_only</span><span class=3D"o">=3D</span><span class=3D"mi">3</spa=
+n><span class=3D"p">)</span>
+<span class=3D"go">1 2 3</span>
+
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">combined_example</=
+span><span class=3D"p">(</span><span class=3D"mi">1</span><span class=3D"p"=
+>,</span> <span class=3D"n">standard</span><span class=3D"o">=3D</span><spa=
+n class=3D"mi">2</span><span class=3D"p">,</span> <span class=3D"n">kwd_onl=
+y</span><span class=3D"o">=3D</span><span class=3D"mi">3</span><span class=
+=3D"p">)</span>
+<span class=3D"go">1 2 3</span>
+
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">combined_example</=
+span><span class=3D"p">(</span><span class=3D"n">pos_only</span><span class=
+=3D"o">=3D</span><span class=3D"mi">1</span><span class=3D"p">,</span> <spa=
+n class=3D"n">standard</span><span class=3D"o">=3D</span><span class=3D"mi"=
+>2</span><span class=3D"p">,</span> <span class=3D"n">kwd_only</span><span =
+class=3D"o">=3D</span><span class=3D"mi">3</span><span class=3D"p">)</span>
+<span class=3D"gt">Traceback (most recent call last):</span><span>
+  File </span><span class=3D"nb">"&lt;stdin&gt;"</span><span>, line </span>=
+<span class=3D"m">1</span><span>, in </span><span class=3D"n">&lt;module&gt=
+;</span>
+<span class=3D"gr">TypeError</span><span>: </span><span class=3D"n">combine=
+d_example() got some positional-only arguments passed as keyword arguments:=
+ 'pos_only'</span>
+</pre></div>
+</div>
+<p>Finally, consider this function definition which has a potential collisi=
+on between the positional argument <code class=3D"docutils literal notransl=
+ate"><span class=3D"pre">name</span></code>  and <code class=3D"docutils li=
+teral notranslate"><span class=3D"pre">**kwds</span></code> which has <code=
+ class=3D"docutils literal notranslate"><span class=3D"pre">name</span></co=
+de> as a key:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">def</span> <sp=
+an class=3D"nf">foo</span><span class=3D"p">(</span><span class=3D"n">name<=
+/span><span class=3D"p">,</span> <span class=3D"o">**</span><span class=3D"=
+n">kwds</span><span class=3D"p">):</span>
+    <span class=3D"k">return</span> <span class=3D"s1">'name'</span> <span =
+class=3D"ow">in</span> <span class=3D"n">kwds</span>
+</pre></div>
+</div>
+<p>There is no possible call that will make it return <code class=3D"docuti=
+ls literal notranslate"><span class=3D"pre">True</span></code> as the keywo=
+rd <code class=3D"docutils literal notranslate"><span class=3D"pre">'name'<=
+/span></code>
+will always bind to the first parameter. For example:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">foo</span><span class=3D"p">(</span><span class=3D"mi">1</span><s=
+pan class=3D"p">,</span> <span class=3D"o">**</span><span class=3D"p">{</sp=
+an><span class=3D"s1">'name'</span><span class=3D"p">:</span> <span class=
+=3D"mi">2</span><span class=3D"p">})</span>
+<span class=3D"gt">Traceback (most recent call last):</span><span>
+  File </span><span class=3D"nb">"&lt;stdin&gt;"</span><span>, line </span>=
+<span class=3D"m">1</span><span>, in </span><span class=3D"n">&lt;module&gt=
+;</span>
+<span class=3D"gr">TypeError</span><span>: </span><span class=3D"n">foo() g=
+ot multiple values for argument 'name'</span>
+<span class=3D"go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>But using <code class=3D"docutils literal notranslate"><span class=3D"pr=
+e">/</span></code> (positional only arguments), it is possible since it all=
+ows <code class=3D"docutils literal notranslate"><span class=3D"pre">name</=
+span></code> as a positional argument and <code class=3D"docutils literal n=
+otranslate"><span class=3D"pre">'name'</span></code> as a key in the keywor=
+d arguments:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">foo</span><span class=3D"p">(</span=
+><span class=3D"n">name</span><span class=3D"p">,</span> <span class=3D"o">=
+/</span><span class=3D"p">,</span> <span class=3D"o">**</span><span class=
+=3D"n">kwds</span><span class=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"k">return</span> <span cla=
+ss=3D"s1">'name'</span> <span class=3D"ow">in</span> <span class=3D"n">kwds=
+</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">foo</span><span cl=
+ass=3D"p">(</span><span class=3D"mi">1</span><span class=3D"p">,</span> <sp=
+an class=3D"o">**</span><span class=3D"p">{</span><span class=3D"s1">'name'=
+</span><span class=3D"p">:</span> <span class=3D"mi">2</span><span class=3D=
+"p">})</span>
+<span class=3D"go">True</span>
+</pre></div>
+</div>
+<p>In other words, the names of positional-only parameters can be used in
+<code class=3D"docutils literal notranslate"><span class=3D"pre">**kwds</sp=
+an></code> without ambiguity.</p>
+</section>
+<section id=3D"recap">
+<h4><span class=3D"section-number">4.8.3.5. </span>Recap<a class=3D"headerl=
+ink" href=3D"https://docs.python.org/3/tutorial/controlflow.html#recap" tit=
+le=3D"Permalink to this headline">=C2=B6</a></h4>
+<p>The use case will determine which parameters to use in the function defi=
+nition:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">def</span> <sp=
+an class=3D"nf">f</span><span class=3D"p">(</span><span class=3D"n">pos1</s=
+pan><span class=3D"p">,</span> <span class=3D"n">pos2</span><span class=3D"=
+p">,</span> <span class=3D"o">/</span><span class=3D"p">,</span> <span clas=
+s=3D"n">pos_or_kwd</span><span class=3D"p">,</span> <span class=3D"o">*</sp=
+an><span class=3D"p">,</span> <span class=3D"n">kwd1</span><span class=3D"p=
+">,</span> <span class=3D"n">kwd2</span><span class=3D"p">):</span>
+</pre></div>
+</div>
+<p>As guidance:</p>
+<ul class=3D"simple">
+<li><p>Use positional-only if you want the name of the parameters to not be
+available to the user. This is useful when parameter names have no real
+meaning, if you want to enforce the order of the arguments when the functio=
+n
+is called or if you need to take some positional parameters and arbitrary
+keywords.</p></li>
+<li><p>Use keyword-only when names have meaning and the function definition=
+ is
+more understandable by being explicit with names or you want to prevent
+users relying on the position of the argument being passed.</p></li>
+<li><p>For an API, use positional-only to prevent breaking API changes
+if the parameter=E2=80=99s name is modified in the future.</p></li>
+</ul>
+</section>
+</section>
+<section id=3D"arbitrary-argument-lists">
+<span id=3D"tut-arbitraryargs"></span><h3><span class=3D"section-number">4.=
+8.4. </span>Arbitrary Argument Lists<a class=3D"headerlink" href=3D"https:/=
+/docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists" titl=
+e=3D"Permalink to this headline">=C2=B6</a></h3>
+<p id=3D"index-3">Finally, the least frequently used option is to specify t=
+hat a function can be
+called with an arbitrary number of arguments.  These arguments will be wrap=
+ped
+up in a tuple (see <a class=3D"reference internal" href=3D"https://docs.pyt=
+hon.org/3/tutorial/datastructures.html#tut-tuples"><span class=3D"std std-r=
+ef">Tuples and Sequences</span></a>).  Before the variable number of argume=
+nts,
+zero or more normal arguments may occur.</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><pre><span></span><span class=3D"k">def</span> <sp=
+an class=3D"nf">write_multiple_items</span><span class=3D"p">(</span><span =
+class=3D"n">file</span><span class=3D"p">,</span> <span class=3D"n">separat=
+or</span><span class=3D"p">,</span> <span class=3D"o">*</span><span class=
+=3D"n">args</span><span class=3D"p">):</span>
+    <span class=3D"n">file</span><span class=3D"o">.</span><span class=3D"n=
+">write</span><span class=3D"p">(</span><span class=3D"n">separator</span><=
+span class=3D"o">.</span><span class=3D"n">join</span><span class=3D"p">(</=
+span><span class=3D"n">args</span><span class=3D"p">))</span>
+</pre></div>
+</div>
+<p>Normally, these <em>variadic</em> arguments will be last in the list of =
+formal
+parameters, because they scoop up all remaining input arguments that are
+passed to the function. Any formal parameters which occur after the <code c=
+lass=3D"docutils literal notranslate"><span class=3D"pre">*args</span></cod=
+e>
+parameter are =E2=80=98keyword-only=E2=80=99 arguments, meaning that they c=
+an only be used as
+keywords rather than positional arguments.</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">concat</span><span class=3D"p">(</s=
+pan><span class=3D"o">*</span><span class=3D"n">args</span><span class=3D"p=
+">,</span> <span class=3D"n">sep</span><span class=3D"o">=3D</span><span cl=
+ass=3D"s2">"/"</span><span class=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"k">return</span> <span cla=
+ss=3D"n">sep</span><span class=3D"o">.</span><span class=3D"n">join</span><=
+span class=3D"p">(</span><span class=3D"n">args</span><span class=3D"p">)</=
+span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">concat</span><span=
+ class=3D"p">(</span><span class=3D"s2">"earth"</span><span class=3D"p">,</=
+span> <span class=3D"s2">"mars"</span><span class=3D"p">,</span> <span clas=
+s=3D"s2">"venus"</span><span class=3D"p">)</span>
+<span class=3D"go">'earth/mars/venus'</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">concat</span><span=
+ class=3D"p">(</span><span class=3D"s2">"earth"</span><span class=3D"p">,</=
+span> <span class=3D"s2">"mars"</span><span class=3D"p">,</span> <span clas=
+s=3D"s2">"venus"</span><span class=3D"p">,</span> <span class=3D"n">sep</sp=
+an><span class=3D"o">=3D</span><span class=3D"s2">"."</span><span class=3D"=
+p">)</span>
+<span class=3D"go">'earth.mars.venus'</span>
+</pre></div>
+</div>
+</section>
+<section id=3D"unpacking-argument-lists">
+<span id=3D"tut-unpacking-arguments"></span><h3><span class=3D"section-numb=
+er">4.8.5. </span>Unpacking Argument Lists<a class=3D"headerlink" href=3D"h=
+ttps://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists=
+" title=3D"Permalink to this headline">=C2=B6</a></h3>
+<p>The reverse situation occurs when the arguments are already in a list or=
+ tuple
+but need to be unpacked for a function call requiring separate positional
+arguments.  For instance, the built-in <a class=3D"reference internal" href=
+=3D"https://docs.python.org/3/library/stdtypes.html#range" title=3D"range">=
+<code class=3D"xref py py-func docutils literal notranslate"><span class=3D=
+"pre">range()</span></code></a> function expects separate
+<em>start</em> and <em>stop</em> arguments.  If they are not available sepa=
+rately, write the
+function call with the  <code class=3D"docutils literal notranslate"><span =
+class=3D"pre">*</span></code>-operator to unpack the arguments out of a lis=
+t
+or tuple:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"nb">list</span><span class=3D"p">(</span><span class=3D"nb">range</s=
+pan><span class=3D"p">(</span><span class=3D"mi">3</span><span class=3D"p">=
+,</span> <span class=3D"mi">6</span><span class=3D"p">))</span>            =
+<span class=3D"c1"># normal call with separate arguments</span>
+<span class=3D"go">[3, 4, 5]</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">args</span> <span =
+class=3D"o">=3D</span> <span class=3D"p">[</span><span class=3D"mi">3</span=
+><span class=3D"p">,</span> <span class=3D"mi">6</span><span class=3D"p">]<=
+/span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"nb">list</span><span =
+class=3D"p">(</span><span class=3D"nb">range</span><span class=3D"p">(</spa=
+n><span class=3D"o">*</span><span class=3D"n">args</span><span class=3D"p">=
+))</span>            <span class=3D"c1"># call with arguments unpacked from=
+ a list</span>
+<span class=3D"go">[3, 4, 5]</span>
+</pre></div>
+</div>
+<p id=3D"index-4">In the same fashion, dictionaries can deliver keyword arg=
+uments with the
+<code class=3D"docutils literal notranslate"><span class=3D"pre">**</span><=
+/code>-operator:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">parrot</span><span class=3D"p">(</s=
+pan><span class=3D"n">voltage</span><span class=3D"p">,</span> <span class=
+=3D"n">state</span><span class=3D"o">=3D</span><span class=3D"s1">'a stiff'=
+</span><span class=3D"p">,</span> <span class=3D"n">action</span><span clas=
+s=3D"o">=3D</span><span class=3D"s1">'voom'</span><span class=3D"p">):</spa=
+n>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s2">"-- This parrot wouldn't"</span><span cl=
+ass=3D"p">,</span> <span class=3D"n">action</span><span class=3D"p">,</span=
+> <span class=3D"n">end</span><span class=3D"o">=3D</span><span class=3D"s1=
+">' '</span><span class=3D"p">)</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s2">"if you put"</span><span class=3D"p">,</=
+span> <span class=3D"n">voltage</span><span class=3D"p">,</span> <span clas=
+s=3D"s2">"volts through it."</span><span class=3D"p">,</span> <span class=
+=3D"n">end</span><span class=3D"o">=3D</span><span class=3D"s1">' '</span><=
+span class=3D"p">)</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s2">"E's"</span><span class=3D"p">,</span> <=
+span class=3D"n">state</span><span class=3D"p">,</span> <span class=3D"s2">=
+"!"</span><span class=3D"p">)</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">d</span> <span cla=
+ss=3D"o">=3D</span> <span class=3D"p">{</span><span class=3D"s2">"voltage"<=
+/span><span class=3D"p">:</span> <span class=3D"s2">"four million"</span><s=
+pan class=3D"p">,</span> <span class=3D"s2">"state"</span><span class=3D"p"=
+>:</span> <span class=3D"s2">"bleedin' demised"</span><span class=3D"p">,</=
+span> <span class=3D"s2">"action"</span><span class=3D"p">:</span> <span cl=
+ass=3D"s2">"VOOM"</span><span class=3D"p">}</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">parrot</span><span=
+ class=3D"p">(</span><span class=3D"o">**</span><span class=3D"n">d</span><=
+span class=3D"p">)</span>
+<span class=3D"go">-- This parrot wouldn't VOOM if you put four million vol=
+ts through it. E's bleedin' demised !</span>
+</pre></div>
+</div>
+</section>
+<section id=3D"lambda-expressions">
+<span id=3D"tut-lambda"></span><h3><span class=3D"section-number">4.8.6. </=
+span>Lambda Expressions<a class=3D"headerlink" href=3D"https://docs.python.=
+org/3/tutorial/controlflow.html#lambda-expressions" title=3D"Permalink to t=
+his headline">=C2=B6</a></h3>
+<p>Small anonymous functions can be created with the <a class=3D"reference =
+internal" href=3D"https://docs.python.org/3/reference/expressions.html#lamb=
+da"><code class=3D"xref std std-keyword docutils literal notranslate"><span=
+ class=3D"pre">lambda</span></code></a> keyword.
+This function returns the sum of its two arguments: <code class=3D"docutils=
+ literal notranslate"><span class=3D"pre">lambda</span> <span class=3D"pre"=
+>a,</span> <span class=3D"pre">b:</span> <span class=3D"pre">a+b</span></co=
+de>.
+Lambda functions can be used wherever function objects are required.  They =
+are
+syntactically restricted to a single expression.  Semantically, they are ju=
+st
+syntactic sugar for a normal function definition.  Like nested function
+definitions, lambda functions can reference variables from the containing
+scope:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">make_incrementor</span><span class=
+=3D"p">(</span><span class=3D"n">n</span><span class=3D"p">):</span>
+<span class=3D"gp">... </span>    <span class=3D"k">return</span> <span cla=
+ss=3D"k">lambda</span> <span class=3D"n">x</span><span class=3D"p">:</span>=
+ <span class=3D"n">x</span> <span class=3D"o">+</span> <span class=3D"n">n<=
+/span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">f</span> <span cla=
+ss=3D"o">=3D</span> <span class=3D"n">make_incrementor</span><span class=3D=
+"p">(</span><span class=3D"mi">42</span><span class=3D"p">)</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">f</span><span clas=
+s=3D"p">(</span><span class=3D"mi">0</span><span class=3D"p">)</span>
+<span class=3D"go">42</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">f</span><span clas=
+s=3D"p">(</span><span class=3D"mi">1</span><span class=3D"p">)</span>
+<span class=3D"go">43</span>
+</pre></div>
+</div>
+<p>The above example uses a lambda expression to return a function.  Anothe=
+r use
+is to pass a small function as an argument:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"n">pairs</span> <span class=3D"o">=3D</span> <span class=3D"p">[(</s=
+pan><span class=3D"mi">1</span><span class=3D"p">,</span> <span class=3D"s1=
+">'one'</span><span class=3D"p">),</span> <span class=3D"p">(</span><span c=
+lass=3D"mi">2</span><span class=3D"p">,</span> <span class=3D"s1">'two'</sp=
+an><span class=3D"p">),</span> <span class=3D"p">(</span><span class=3D"mi"=
+>3</span><span class=3D"p">,</span> <span class=3D"s1">'three'</span><span =
+class=3D"p">),</span> <span class=3D"p">(</span><span class=3D"mi">4</span>=
+<span class=3D"p">,</span> <span class=3D"s1">'four'</span><span class=3D"p=
+">)]</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">pairs</span><span =
+class=3D"o">.</span><span class=3D"n">sort</span><span class=3D"p">(</span>=
+<span class=3D"n">key</span><span class=3D"o">=3D</span><span class=3D"k">l=
+ambda</span> <span class=3D"n">pair</span><span class=3D"p">:</span> <span =
+class=3D"n">pair</span><span class=3D"p">[</span><span class=3D"mi">1</span=
+><span class=3D"p">])</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">pairs</span>
+<span class=3D"go">[(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]</spa=
+n>
+</pre></div>
+</div>
+</section>
+<section id=3D"documentation-strings">
+<span id=3D"tut-docstrings"></span><h3><span class=3D"section-number">4.8.7=
+. </span>Documentation Strings<a class=3D"headerlink" href=3D"https://docs.=
+python.org/3/tutorial/controlflow.html#documentation-strings" title=3D"Perm=
+alink to this headline">=C2=B6</a></h3>
+<p id=3D"index-5">Here are some conventions about the content and formattin=
+g of documentation
+strings.</p>
+<p>The first line should always be a short, concise summary of the object=
+=E2=80=99s
+purpose.  For brevity, it should not explicitly state the object=E2=80=99s =
+name or type,
+since these are available by other means (except if the name happens to be =
+a
+verb describing a function=E2=80=99s operation).  This line should begin wi=
+th a capital
+letter and end with a period.</p>
+<p>If there are more lines in the documentation string, the second line sho=
+uld be
+blank, visually separating the summary from the rest of the description.  T=
+he
+following lines should be one or more paragraphs describing the object=E2=
+=80=99s calling
+conventions, its side effects, etc.</p>
+<p>The Python parser does not strip indentation from multi-line string lite=
+rals in
+Python, so tools that process documentation have to strip indentation if
+desired.  This is done using the following convention. The first non-blank =
+line
+<em>after</em> the first line of the string determines the amount of indent=
+ation for
+the entire documentation string.  (We can=E2=80=99t use the first line sinc=
+e it is
+generally adjacent to the string=E2=80=99s opening quotes so its indentatio=
+n is not
+apparent in the string literal.)  Whitespace =E2=80=9Cequivalent=E2=80=9D t=
+o this indentation is
+then stripped from the start of all lines of the string.  Lines that are
+indented less should not occur, but if they occur all their leading whitesp=
+ace
+should be stripped.  Equivalence of whitespace should be tested after expan=
+sion
+of tabs (to 8 spaces, normally).</p>
+<p>Here is an example of a multi-line docstring:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">my_function</span><span class=3D"p"=
+>():</span>
+<span class=3D"gp">... </span>    <span class=3D"sd">"""Do nothing, but doc=
+ument it.</span>
+<span class=3D"gp">...</span><span class=3D"sd"></span>
+<span class=3D"gp">... </span><span class=3D"sd">    No, really, it doesn't=
+ do anything.</span>
+<span class=3D"gp">... </span><span class=3D"sd">    """</span>
+<span class=3D"gp">... </span>    <span class=3D"k">pass</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"nb">print</span><span=
+ class=3D"p">(</span><span class=3D"n">my_function</span><span class=3D"o">=
+.</span><span class=3D"vm">__doc__</span><span class=3D"p">)</span>
+<span class=3D"go">Do nothing, but document it.</span>
+
+<span class=3D"go">    No, really, it doesn't do anything.</span>
+</pre></div>
+</div>
+</section>
+<section id=3D"function-annotations">
+<span id=3D"tut-annotations"></span><h3><span class=3D"section-number">4.8.=
+8. </span>Function Annotations<a class=3D"headerlink" href=3D"https://docs.=
+python.org/3/tutorial/controlflow.html#function-annotations" title=3D"Perma=
+link to this headline">=C2=B6</a></h3>
+<p id=3D"index-6"><a class=3D"reference internal" href=3D"https://docs.pyth=
+on.org/3/reference/compound_stmts.html#function"><span class=3D"std std-ref=
+">Function annotations</span></a> are completely optional metadata
+information about the types used by user-defined functions (see <span class=
+=3D"target" id=3D"index-7"></span><a class=3D"pep reference external" href=
+=3D"https://peps.python.org/pep-3107/"><strong>PEP 3107</strong></a> and
+<span class=3D"target" id=3D"index-8"></span><a class=3D"pep reference exte=
+rnal" href=3D"https://peps.python.org/pep-0484/"><strong>PEP 484</strong></=
+a> for more information).</p>
+<p><a class=3D"reference internal" href=3D"https://docs.python.org/3/glossa=
+ry.html#term-function-annotation"><span class=3D"xref std std-term">Annotat=
+ions</span></a> are stored in the <code class=3D"xref py py-attr docutils l=
+iteral notranslate"><span class=3D"pre">__annotations__</span></code>
+attribute of the function as a dictionary and have no effect on any other p=
+art of the
+function.  Parameter annotations are defined by a colon after the parameter=
+ name, followed
+by an expression evaluating to the value of the annotation.  Return annotat=
+ions are
+defined by a literal <code class=3D"docutils literal notranslate"><span cla=
+ss=3D"pre">-&gt;</span></code>, followed by an expression, between the para=
+meter
+list and the colon denoting the end of the <a class=3D"reference internal" =
+href=3D"https://docs.python.org/3/reference/compound_stmts.html#def"><code =
+class=3D"xref std std-keyword docutils literal notranslate"><span class=3D"=
+pre">def</span></code></a> statement.  The
+following example has a required argument, an optional argument, and the re=
+turn
+value annotated:</p>
+<div class=3D"highlight-python3 notranslate" style=3D"position: relative;">=
+<div class=3D"highlight"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" style=3D"cursor: pointer; position: absolute; top: 0px; righ=
+t: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width=
+: 0.666667px; color: rgb(170, 204, 153); font-family: monospace; padding-le=
+ft: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&=
+gt;</span><pre><span></span><span class=3D"gp">&gt;&gt;&gt; </span><span cl=
+ass=3D"k">def</span> <span class=3D"nf">f</span><span class=3D"p">(</span><=
+span class=3D"n">ham</span><span class=3D"p">:</span> <span class=3D"nb">st=
+r</span><span class=3D"p">,</span> <span class=3D"n">eggs</span><span class=
+=3D"p">:</span> <span class=3D"nb">str</span> <span class=3D"o">=3D</span> =
+<span class=3D"s1">'eggs'</span><span class=3D"p">)</span> <span class=3D"o=
+">-&gt;</span> <span class=3D"nb">str</span><span class=3D"p">:</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s2">"Annotations:"</span><span class=3D"p">,=
+</span> <span class=3D"n">f</span><span class=3D"o">.</span><span class=3D"=
+vm">__annotations__</span><span class=3D"p">)</span>
+<span class=3D"gp">... </span>    <span class=3D"nb">print</span><span clas=
+s=3D"p">(</span><span class=3D"s2">"Arguments:"</span><span class=3D"p">,</=
+span> <span class=3D"n">ham</span><span class=3D"p">,</span> <span class=3D=
+"n">eggs</span><span class=3D"p">)</span>
+<span class=3D"gp">... </span>    <span class=3D"k">return</span> <span cla=
+ss=3D"n">ham</span> <span class=3D"o">+</span> <span class=3D"s1">' and '</=
+span> <span class=3D"o">+</span> <span class=3D"n">eggs</span>
+<span class=3D"gp">...</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"n">f</span><span clas=
+s=3D"p">(</span><span class=3D"s1">'spam'</span><span class=3D"p">)</span>
+<span class=3D"go">Annotations: {'ham': &lt;class 'str'&gt;, 'return': &lt;=
+class 'str'&gt;, 'eggs': &lt;class 'str'&gt;}</span>
+<span class=3D"go">Arguments: spam eggs</span>
+<span class=3D"go">'spam and eggs'</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id=3D"intermezzo-coding-style">
+<span id=3D"tut-codingstyle"></span><h2><span class=3D"section-number">4.9.=
+ </span>Intermezzo: Coding Style<a class=3D"headerlink" href=3D"https://doc=
+s.python.org/3/tutorial/controlflow.html#intermezzo-coding-style" title=3D"=
+Permalink to this headline">=C2=B6</a></h2>
+<p id=3D"index-9">Now that you are about to write longer, more complex piec=
+es of Python, it is a
+good time to talk about <em>coding style</em>.  Most languages can be writt=
+en (or more
+concise, <em>formatted</em>) in different styles; some are more readable th=
+an others.
+Making it easy for others to read your code is always a good idea, and adop=
+ting
+a nice coding style helps tremendously for that.</p>
+<p>For Python, <span class=3D"target" id=3D"index-10"></span><a class=3D"pe=
+p reference external" href=3D"https://peps.python.org/pep-0008/"><strong>PE=
+P 8</strong></a> has emerged as the style guide that most projects adhere t=
+o;
+it promotes a very readable and eye-pleasing coding style.  Every Python
+developer should read it at some point; here are the most important points
+extracted for you:</p>
+<ul>
+<li><p>Use 4-space indentation, and no tabs.</p>
+<p>4 spaces are a good compromise between small indentation (allows greater
+nesting depth) and large indentation (easier to read).  Tabs introduce
+confusion, and are best left out.</p>
+</li>
+<li><p>Wrap lines so that they don=E2=80=99t exceed 79 characters.</p>
+<p>This helps users with small displays and makes it possible to have sever=
+al
+code files side-by-side on larger displays.</p>
+</li>
+<li><p>Use blank lines to separate functions and classes, and larger blocks=
+ of
+code inside functions.</p></li>
+<li><p>When possible, put comments on a line of their own.</p></li>
+<li><p>Use docstrings.</p></li>
+<li><p>Use spaces around operators and after commas, but not directly insid=
+e
+bracketing constructs: <code class=3D"docutils literal notranslate"><span c=
+lass=3D"pre">a</span> <span class=3D"pre">=3D</span> <span class=3D"pre">f(=
+1,</span> <span class=3D"pre">2)</span> <span class=3D"pre">+</span> <span =
+class=3D"pre">g(3,</span> <span class=3D"pre">4)</span></code>.</p></li>
+<li><p>Name your classes and functions consistently; the convention is to u=
+se
+<code class=3D"docutils literal notranslate"><span class=3D"pre">UpperCamel=
+Case</span></code> for classes and <code class=3D"docutils literal notransl=
+ate"><span class=3D"pre">lowercase_with_underscores</span></code> for funct=
+ions
+and methods.  Always use <code class=3D"docutils literal notranslate"><span=
+ class=3D"pre">self</span></code> as the name for the first method argument
+(see <a class=3D"reference internal" href=3D"https://docs.python.org/3/tuto=
+rial/classes.html#tut-firstclasses"><span class=3D"std std-ref">A First Loo=
+k at Classes</span></a> for more on classes and methods).</p></li>
+<li><p>Don=E2=80=99t use fancy encodings if your code is meant to be used i=
+n international
+environments.  Python=E2=80=99s default, UTF-8, or even plain ASCII work be=
+st in any
+case.</p></li>
+<li><p>Likewise, don=E2=80=99t use non-ASCII characters in identifiers if t=
+here is only the
+slightest chance people speaking a different language will read or maintain
+the code.</p></li>
+</ul>
+<p class=3D"rubric">Footnotes</p>
+<dl class=3D"footnote brackets">
+<dt class=3D"label" id=3D"id2"><span class=3D"brackets"><a class=3D"fn-back=
+ref" href=3D"https://docs.python.org/3/tutorial/controlflow.html#id1">1</a>=
+</span></dt>
+<dd><p>Actually, <em>call by object reference</em> would be a better descri=
+ption,
+since if a mutable object is passed, the caller will see any changes the
+callee makes to it (items inserted into a list).</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class=3D"clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class=3D"sphinxsidebar" role=3D"navigation" aria-label=3D"main n=
+avigation">
+        <div class=3D"sphinxsidebarwrapper" style=3D"float: left; margin-ri=
+ght: 0px; width: 217px;">
+  <div>
+    <h3><a href=3D"https://docs.python.org/3/contents.html">Table of Conten=
+ts</a></h3>
+    <ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#">4. More Control Flow Tools</a><ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#if-statements">4.1. <code class=3D"xref std std-keywor=
+d docutils literal notranslate"><span class=3D"pre">if</span></code> Statem=
+ents</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#for-statements">4.2. <code class=3D"xref std std-keywo=
+rd docutils literal notranslate"><span class=3D"pre">for</span></code> Stat=
+ements</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#the-range-function">4.3. The <code class=3D"xref py py=
+-func docutils literal notranslate"><span class=3D"pre">range()</span></cod=
+e> Function</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loop=
+s">4.4. <code class=3D"xref std std-keyword docutils literal notranslate"><=
+span class=3D"pre">break</span></code> and <code class=3D"xref std std-keyw=
+ord docutils literal notranslate"><span class=3D"pre">continue</span></code=
+> Statements, and <code class=3D"xref std std-keyword docutils literal notr=
+anslate"><span class=3D"pre">else</span></code> Clauses on Loops</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#pass-statements">4.5. <code class=3D"xref std std-keyw=
+ord docutils literal notranslate"><span class=3D"pre">pass</span></code> St=
+atements</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#match-statements">4.6. <code class=3D"xref std std-key=
+word docutils literal notranslate"><span class=3D"pre">match</span></code> =
+Statements</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#defining-functions">4.7. Defining Functions</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#more-on-defining-functions">4.8. More on Defining Func=
+tions</a><ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#default-argument-values">4.8.1. Default Argument Value=
+s</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#keyword-arguments">4.8.2. Keyword Arguments</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#special-parameters">4.8.3. Special parameters</a><ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#positional-or-keyword-arguments">4.8.3.1. Positional-o=
+r-Keyword Arguments</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#positional-only-parameters">4.8.3.2. Positional-Only P=
+arameters</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#keyword-only-arguments">4.8.3.3. Keyword-Only Argument=
+s</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#function-examples">4.8.3.4. Function Examples</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#recap">4.8.3.5. Recap</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#arbitrary-argument-lists">4.8.4. Arbitrary Argument Li=
+sts</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#unpacking-argument-lists">4.8.5. Unpacking Argument Li=
+sts</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#lambda-expressions">4.8.6. Lambda Expressions</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#documentation-strings">4.8.7. Documentation Strings</a=
+></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#function-annotations">4.8.8. Function Annotations</a><=
+/li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/tutor=
+ial/controlflow.html#intermezzo-coding-style">4.9. Intermezzo: Coding Style=
+</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class=3D"topless"><a href=3D"https://docs.python.org/3/tutorial/intr=
+oduction.html" title=3D"previous chapter"><span class=3D"section-number">3.=
+ </span>An Informal Introduction to Python</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class=3D"topless"><a href=3D"https://docs.python.org/3/tutorial/data=
+structures.html" title=3D"next chapter"><span class=3D"section-number">5. <=
+/span>Data Structures</a></p>
+  </div>
+  <div role=3D"note" aria-label=3D"source link">
+    <h3>This Page</h3>
+    <ul class=3D"this-page-menu">
+      <li><a href=3D"https://docs.python.org/3/bugs.html">Report a Bug</a><=
+/li>
+      <li>
+        <a href=3D"https://github.com/python/cpython/blob/3.11/Doc/tutorial=
+/controlflow.rst" rel=3D"nofollow">Show Source
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      <div id=3D"sidebarbutton" title=3D"Collapse sidebar" style=3D"border-=
+radius: 0px 5px 5px 0px; color: rgb(68, 68, 68); background-color: rgb(204,=
+ 204, 204); font-size: 1.2em; cursor: pointer; height: 100%; padding-left: =
+1px; margin-left: 218px;"><span style=3D"display: block; position: fixed; t=
+op: 50%;">=C2=AB</span></div></div>
+      <div class=3D"clearer"></div>
+    </div> =20
+    <div class=3D"related" role=3D"navigation" aria-label=3D"related naviga=
+tion">
+      <h3>Navigation</h3>
+      <ul>
+        <li class=3D"right" style=3D"margin-right: 10px">
+          <a href=3D"https://docs.python.org/3/genindex.html" title=3D"Gene=
+ral Index">index</a></li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/py-modindex.html" title=3D"P=
+ython Module Index">modules</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/tutorial/datastructures.html=
+" title=3D"5. Data Structures">next</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/tutorial/introduction.html" =
+title=3D"3. An Informal Introduction to Python">previous</a> |</li>
+
+          <li><img src=3D"https://docs.python.org/3/_static/py.svg" alt=3D"=
+python logo" style=3D"vertical-align: middle; margin-top: -1px"></li>
+          <li><a href=3D"https://www.python.org/">Python</a> =C2=BB</li>
+          <li class=3D"switchers">
+            <div class=3D"language_switcher_placeholder"><select id=3D"lang=
+uage_select"><option value=3D"en" selected=3D"selected">English</option><op=
+tion value=3D"es">Spanish</option><option value=3D"fr">French</option><opti=
+on value=3D"ja">Japanese</option><option value=3D"ko">Korean</option><optio=
+n value=3D"pt-br">Brazilian Portuguese</option><option value=3D"tr">Turkish=
+</option><option value=3D"zh-cn">Simplified Chinese</option><option value=
+=3D"zh-tw">Traditional Chinese</option></select></div>
+            <div class=3D"version_switcher_placeholder"><select id=3D"versi=
+on_select"><option value=3D"3.13">dev (3.13)</option><option value=3D"3.12"=
+>pre (3.12)</option><option value=3D"3.11" selected=3D"selected">3.11.4</op=
+tion><option value=3D"3.10">3.10</option><option value=3D"3.9">3.9</option>=
+<option value=3D"3.8">3.8</option><option value=3D"3.7">3.7</option><option=
+ value=3D"3.6">3.6</option><option value=3D"3.5">3.5</option><option value=
+=3D"2.7">2.7</option></select></div>
+          </li>
+          <li>
+             =20
+          </li>
+    <li id=3D"cpython-language-and-version">
+      <a href=3D"https://docs.python.org/3/index.html">3.11.4 Documentation=
+</a> =C2=BB
+    </li>
+
+          <li class=3D"nav-item nav-item-1"><a href=3D"https://docs.python.=
+org/3/tutorial/index.html">The Python Tutorial</a> =C2=BB</li>
+        <li class=3D"nav-item nav-item-this"><a href=3D"https://docs.python=
+.org/3/tutorial/controlflow.html"><span class=3D"section-number">4. </span>=
+More Control Flow Tools</a></li>
+                <li class=3D"right">
+                   =20
+
+    <div class=3D"inline-search" role=3D"search">
+        <form class=3D"inline-search" action=3D"https://docs.python.org/3/s=
+earch.html" method=3D"get">
+          <input placeholder=3D"Quick search" aria-label=3D"Quick search" t=
+ype=3D"text" name=3D"q">
+          <input type=3D"submit" value=3D"Go">
+         =20
+         =20
+        </form>
+    </div>
+                     |
+                </li>
+           =20
+      </ul>
+    </div> =20
+    <div class=3D"footer">
+    =C2=A9 <a href=3D"https://docs.python.org/3/copyright.html">Copyright</=
+a> 2001-2023, Python Software Foundation.
+    <br>
+    This page is licensed under the Python Software Foundation License Vers=
+ion 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally=
+ licensed under the Zero Clause BSD License.
+    <br>
+    See <a href=3D"https://docs.python.org/license.html">History and Licens=
+e</a> for more information.<br>
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href=3D"https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+
+    Last updated on Jun 27, 2023.
+    <a href=3D"https://docs.python.org/bugs.html">Found a bug</a>?
+    <br>
+
+    Created using <a href=3D"https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+
+   =20
+ =20
+</body></html>
+------MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-b003df99-6973-4359-b566-49753d0cd50f@mhtml.blink
+
+@charset "utf-8";
+
+@media only screen {
+  table.full-width-table { width: 100%; }
+}
+------MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/pygments.css
+
+@charset "utf-8";
+
+pre { line-height: 125%; }
+
+td.linenos .normal { color: inherit; background-color: transparent; padding=
+-left: 5px; padding-right: 5px; }
+
+span.linenos { color: inherit; background-color: transparent; padding-left:=
+ 5px; padding-right: 5px; }
+
+td.linenos .special { color: rgb(0, 0, 0); background-color: rgb(255, 255, =
+192); padding-left: 5px; padding-right: 5px; }
+
+span.linenos.special { color: rgb(0, 0, 0); background-color: rgb(255, 255,=
+ 192); padding-left: 5px; padding-right: 5px; }
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+.highlight { background: rgb(248, 248, 248); }
+
+.highlight .c { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .err { border: 1px solid rgb(255, 0, 0); }
+
+.highlight .k { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .o { color: rgb(102, 102, 102); }
+
+.highlight .ch { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .cm { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .cp { color: rgb(156, 101, 0); }
+
+.highlight .cpf { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .c1 { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .cs { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .gd { color: rgb(160, 0, 0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gr { color: rgb(228, 0, 0); }
+
+.highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gi { color: rgb(0, 132, 0); }
+
+.highlight .go { color: rgb(113, 113, 113); }
+
+.highlight .gp { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+
+.highlight .gt { color: rgb(0, 68, 221); }
+
+.highlight .kc { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .kd { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .kn { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .kp { color: rgb(0, 128, 0); }
+
+.highlight .kr { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .kt { color: rgb(176, 0, 64); }
+
+.highlight .m { color: rgb(102, 102, 102); }
+
+.highlight .s { color: rgb(186, 33, 33); }
+
+.highlight .na { color: rgb(104, 120, 34); }
+
+.highlight .nb { color: rgb(0, 128, 0); }
+
+.highlight .nc { color: rgb(0, 0, 255); font-weight: bold; }
+
+.highlight .no { color: rgb(136, 0, 0); }
+
+.highlight .nd { color: rgb(170, 34, 255); }
+
+.highlight .ni { color: rgb(113, 113, 113); font-weight: bold; }
+
+.highlight .ne { color: rgb(203, 63, 56); font-weight: bold; }
+
+.highlight .nf { color: rgb(0, 0, 255); }
+
+.highlight .nl { color: rgb(118, 118, 0); }
+
+.highlight .nn { color: rgb(0, 0, 255); font-weight: bold; }
+
+.highlight .nt { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .nv { color: rgb(25, 23, 124); }
+
+.highlight .ow { color: rgb(170, 34, 255); font-weight: bold; }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mb { color: rgb(102, 102, 102); }
+
+.highlight .mf { color: rgb(102, 102, 102); }
+
+.highlight .mh { color: rgb(102, 102, 102); }
+
+.highlight .mi { color: rgb(102, 102, 102); }
+
+.highlight .mo { color: rgb(102, 102, 102); }
+
+.highlight .sa { color: rgb(186, 33, 33); }
+
+.highlight .sb { color: rgb(186, 33, 33); }
+
+.highlight .sc { color: rgb(186, 33, 33); }
+
+.highlight .dl { color: rgb(186, 33, 33); }
+
+.highlight .sd { color: rgb(186, 33, 33); font-style: italic; }
+
+.highlight .s2 { color: rgb(186, 33, 33); }
+
+.highlight .se { color: rgb(170, 93, 31); font-weight: bold; }
+
+.highlight .sh { color: rgb(186, 33, 33); }
+
+.highlight .si { color: rgb(164, 90, 119); font-weight: bold; }
+
+.highlight .sx { color: rgb(0, 128, 0); }
+
+.highlight .sr { color: rgb(164, 90, 119); }
+
+.highlight .s1 { color: rgb(186, 33, 33); }
+
+.highlight .ss { color: rgb(25, 23, 124); }
+
+.highlight .bp { color: rgb(0, 128, 0); }
+
+.highlight .fm { color: rgb(0, 0, 255); }
+
+.highlight .vc { color: rgb(25, 23, 124); }
+
+.highlight .vg { color: rgb(25, 23, 124); }
+
+.highlight .vi { color: rgb(25, 23, 124); }
+
+.highlight .vm { color: rgb(25, 23, 124); }
+
+.highlight .il { color: rgb(102, 102, 102); }
+------MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/pydoctheme.css?digest=2d3badd06fe70b34b68db01f99471ce1624ffe4a
+
+@charset "utf-8";
+
+@import url("default.css");
+
+body { background-color: white; margin-left: 1em; margin-right: 1em; }
+
+.mobile-nav, .menu-wrapper { display: none; }
+
+div.related { margin-bottom: 1.2em; padding: 0.5em 0px; border-bottom: 1px =
+solid rgb(204, 204, 204); margin-top: 0.5em; }
+
+div.related a:hover { color: rgb(0, 149, 196); }
+
+div.related ~ div.related { border-top: 1px solid rgb(204, 204, 204); borde=
+r-bottom: none; }
+
+.related .switchers { display: inline-flex; }
+
+.switchers > div { margin-right: 5px; }
+
+.version_switcher_placeholder, .language_switcher_placeholder { padding-lef=
+t: 5px; background-color: white; }
+
+.inline-search { display: inline; }
+
+form.inline-search input { display: inline; }
+
+form.inline-search input[type=3D"submit"] { width: 40px; }
+
+div.document { display: flex; }
+
+div.sphinxsidebar { float: none; position: sticky; top: 0px; max-height: 10=
+0vh; background-color: rgb(238, 238, 238); border-radius: 5px; line-height:=
+ 130%; font-size: smaller; }
+
+div.sphinxsidebar h3, div.sphinxsidebar h4 { margin-top: 1.5em; }
+
+div.sphinxsidebarwrapper { box-sizing: border-box; height: 100%; overflow: =
+hidden auto; }
+
+div.sphinxsidebarwrapper > h3:first-child { margin-top: 0.2em; }
+
+div.sphinxsidebarwrapper > ul > li > ul > li { margin-bottom: 0.4em; }
+
+div.sphinxsidebar a:hover { color: rgb(0, 149, 196); }
+
+form.inline-search input, div.sphinxsidebar input { font-family: "Lucida Gr=
+ande", Arial, sans-serif; border: 1px solid rgb(153, 153, 153); font-size: =
+smaller; border-radius: 3px; }
+
+div.sphinxsidebar input[type=3D"text"] { max-width: 150px; }
+
+div.body { padding: 0px 0px 0px 1.2em; }
+
+div.body p, div.body dd, div.body li, div.body blockquote { text-align: lef=
+t; line-height: 1.4; }
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h=
+6 { margin: 0px; border: 0px; padding: 0.3em 0px; }
+
+div.body hr { border: 0px; background-color: rgb(204, 204, 204); height: 1p=
+x; }
+
+div.body pre { border-radius: 3px; border: 1px solid rgb(170, 204, 153); }
+
+div.body div.admonition, div.body div.impl-detail { border-radius: 3px; }
+
+div.body div.impl-detail > p { margin: 0px; }
+
+div.body div.seealso { border: 1px solid rgb(221, 221, 102); }
+
+div.body a { color: rgb(0, 114, 170); }
+
+div.body a:visited { color: rgb(99, 99, 187); }
+
+div.body a:hover { color: rgb(0, 176, 228); }
+
+tt, code, pre { font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono"=
+, "Liberation Mono", Menlo, Monaco, Consolas, monospace; font-size: 96.5%; =
+}
+
+div.body tt, div.body code { border-radius: 3px; }
+
+div.body tt.descname, div.body code.descname { font-size: 120%; }
+
+div.body tt.xref, div.body a tt, div.body code.xref, div.body a code { font=
+-weight: normal; }
+
+table.docutils { border: 1px solid rgb(221, 221, 221); min-width: 20%; bord=
+er-radius: 3px; margin-top: 10px; margin-bottom: 10px; }
+
+table.docutils td, table.docutils th { border-radius: 3px; border: 1px soli=
+d rgb(221, 221, 221) !important; }
+
+table p, table li { text-align: left !important; }
+
+table.docutils th { background-color: rgb(238, 238, 238); padding: 0.3em 0.=
+5em; }
+
+table.docutils td { background-color: white; padding: 0.3em 0.5em; }
+
+table.footnote, table.footnote td { border: 0px !important; }
+
+div.footer { line-height: 150%; text-align: right; width: auto; margin-righ=
+t: 10px; }
+
+div.footer a:hover { color: rgb(0, 149, 196); }
+
+.refcount { color: rgb(0, 102, 0); }
+
+.stableabi { color: rgb(34, 34, 153); }
+
+.highlight { background: none !important; }
+
+dl > dt span ~ em { font-family: ui-monospace, "Cascadia Mono", "Segoe UI M=
+ono", "Liberation Mono", Menlo, Monaco, Consolas, monospace; }
+
+.toctree-wrapper ul { padding-left: 20px; }
+
+div.genindex-jumpbox, div.genindex-jumpbox > p { display: inline-flex; flex=
+-wrap: wrap; }
+
+div.genindex-jumpbox a { margin: 0px 5px; min-width: 30px; text-align: cent=
+er; }
+
+@media (max-width: 1023px) {
+  div.body { min-width: 100%; padding: 0px; font-size: 0.875rem; }
+  div.bodywrapper { margin: 0px; }
+  div.body h1 { font-size: 1.625rem; }
+  div.body h2 { font-size: 1.25rem; }
+  div.body h3, div.body h4, div.body h5 { font-size: 1rem; }
+  div.body ul { padding-inline-start: 1rem; }
+  div.body blockquote { margin-inline: 1rem 0px; }
+  div.related, .sphinxsidebar { display: none; }
+  html { scroll-padding-top: 40px; }
+  body { margin-top: 40px; }
+  .mobile-nav { display: block; height: 40px; width: 100%; position: fixed;=
+ top: 0px; left: 0px; background-color: white; box-shadow: rgba(0, 0, 0, 0.=
+25) 0px 0px 2px 0px; z-index: 1; }
+  .mobile-nav * { box-sizing: border-box; }
+  .nav-content { position: absolute; z-index: 2; left: 0px; top: 0px; heigh=
+t: 40px; width: 100%; max-width: 100vw; padding: 0px 1rem 0px 45px; display=
+: flex; align-items: center; background-color: white; }
+  .nav-logo { margin-right: 0.7rem; display: flex; flex: 0 0 auto; }
+  .nav-content img { width: 20px; height: auto; }
+  .version_switcher_placeholder { flex: 0 1 0px; margin-right: 1rem; }
+  .nav-content .search { display: flex; flex: 1 1 auto; align-items: center=
+; padding: 0px 0px 0px 2px; border: 1px solid rgb(169, 169, 169); height: 3=
+0px; overflow: hidden; }
+  .nav-content .search:hover { box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6=
+px 0px; border-color: rgba(223, 225, 229, 0); }
+  .nav-content .search input[type=3D"text"] { border: 0px; outline: 0px; bo=
+x-shadow: none; width: 40px; height: 28px; flex: 1 1 auto; }
+  .nav-content .search input[type=3D"submit"] { height: 100%; appearance: n=
+one; border-width: 1px; border-style: solid; border-color: transparent tran=
+sparent transparent rgb(169, 169, 169); border-image: initial; box-shadow: =
+none; cursor: pointer; background-color: rgb(240, 240, 240); margin-right: =
+0px; }
+  .nav-content .search input[type=3D"submit"]:hover { border-color: rgb(169=
+, 169, 169); }
+  .nav-content .search svg { flex: 0 0 20px; fill: rgb(51, 51, 51); }
+  .toggler__input { width: 40px; height: 40px; left: 0px; opacity: 0; posit=
+ion: absolute; z-index: 3; margin: 0px; }
+  .toggler__label { width: 40px; height: 40px; margin: 0px; position: absol=
+ute; cursor: pointer; top: 0px; left: 0px; background-color: transparent; b=
+order: 1px solid white; box-shadow: none; z-index: 3; display: flex; align-=
+items: center; justify-content: center; padding: 0px 8px; }
+  .toggler__label:focus { background-color: rgb(238, 238, 238); border: 1px=
+ solid rgb(237, 237, 237); box-shadow: rgba(0, 0, 0, 0.25) 1px 0px 2px 0px;=
+ }
+  .toggler__label:hover { background-color: rgb(238, 238, 238); border: 1px=
+ solid rgb(237, 237, 237); box-shadow: rgba(0, 0, 0, 0.25) 1px 0px 2px 0px;=
+ }
+  .toggler__label > span { position: relative; flex: 0 0 auto; height: 2px;=
+ width: 100%; background: rgb(68, 68, 68); transition: all 400ms ease 0s; }
+  .toggler__label > span::before, .toggler__label > span::after { content: =
+""; height: 2px; width: 100%; background: inherit; position: absolute; left=
+: 0px; top: -8px; }
+  .toggler__label > span::after { top: 8px; }
+  .toggler__input:checked ~ .toggler__label span { transform: rotate(135deg=
+); }
+  .toggler__input:checked ~ .toggler__label span::before { transform: rotat=
+e(90deg); }
+  .toggler__input:checked ~ .toggler__label span::before, .toggler__input:c=
+hecked ~ .toggler__label span::after { top: 0px; }
+  .toggler__input:checked:hover ~ .toggler__label span { transform: rotate(=
+315deg); }
+  .toggler__input:checked ~ .menu-wrapper { visibility: visible; left: 0px;=
+ }
+  .menu-wrapper { display: block; position: fixed; top: 0px; transition: le=
+ft 400ms ease 0s; left: -310px; width: 300px; height: 100%; background-colo=
+r: rgb(238, 238, 238); box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px; overflo=
+w-y: auto; }
+  .menu-wrapper.open { visibility: visible; left: 0px; }
+  .menu { padding: 40px 10px 30px 20px; }
+  .menu-wrapper h3, .menu-wrapper h4 { margin-bottom: 0px; font-weight: nor=
+mal; }
+  .menu-wrapper h4 { font-size: 1.3em; }
+  .menu-wrapper h3 { color: rgb(68, 68, 68); font-size: 1.4em; }
+  .menu-wrapper h3 + p, .menu-wrapper h4 + p { margin-top: 0.5rem; }
+  .menu a { font-size: smaller; color: rgb(68, 68, 68); text-decoration: no=
+ne; }
+  .menu ul { list-style: none; line-height: 1.4; overflow-wrap: break-word;=
+ padding-left: 0px; }
+  .menu ul ul { margin-left: 20px; list-style: square; }
+  .menu ul li { margin-bottom: 0.5rem; }
+  .language_switcher_placeholder, .version_switcher_placeholder { position:=
+ relative; border: 1px solid rgb(168, 168, 168); height: 30px; padding-righ=
+t: 7px; }
+  .language_switcher_placeholder { margin-top: 2rem; }
+  .language_switcher_placeholder::after, .version_switcher_placeholder::aft=
+er { content: url("../_static/caret-down.svg"); position: absolute; top: 7p=
+x; width: 15px; height: 15px; right: 0px; pointer-events: none; }
+  .language_switcher_placeholder select, .version_switcher_placeholder sele=
+ct { appearance: none; border: 0px; height: 100%; background-color: white; =
+}
+  .language_switcher_placeholder:focus-visible, .version_switcher_placehold=
+er:focus-visible { outline-offset: 5px; }
+  .language_switcher_placeholder select { width: 100%; }
+  .document { position: relative; z-index: 0; }
+  .responsive-table__container { width: 100%; overflow-x: auto; }
+}
+
+@media (min-width: 1024px) {
+  div.footer { margin-top: -2em; }
+}
+------MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/default.css
+
+@charset "utf-8";
+
+@import url("classic.css");
+------MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/classic.css
+
+@charset "utf-8";
+
+@import url("basic.css");
+
+html { background-color: rgb(255, 255, 255); }
+
+body { font-family: "Lucida Grande", Arial, sans-serif; font-size: 100%; ba=
+ckground-color: white; color: rgb(0, 0, 0); margin: 0px; padding: 0px; }
+
+div.document { background-color: white; }
+
+div.documentwrapper { float: left; width: 100%; }
+
+div.bodywrapper { margin: 0px 0px 0px 230px; }
+
+div.body { background-color: white; color: rgb(34, 34, 34); padding: 0px 20=
+px 30px; }
+
+div.footer { color: rgb(85, 85, 85); width: 100%; padding: 9px 0px; text-al=
+ign: center; font-size: 75%; }
+
+div.footer a { color: rgb(85, 85, 85); text-decoration: underline; }
+
+div.related { background-color: white; line-height: 30px; color: rgb(102, 1=
+02, 102); }
+
+div.related a { color: rgb(68, 68, 68); }
+
+div.sphinxsidebar { }
+
+div.sphinxsidebar h3 { font-family: "Lucida Grande", Arial, sans-serif; col=
+or: rgb(68, 68, 68); font-size: 1.4em; font-weight: normal; margin: 0px; pa=
+dding: 0px; }
+
+div.sphinxsidebar h3 a { color: rgb(68, 68, 68); }
+
+div.sphinxsidebar h4 { font-family: "Lucida Grande", Arial, sans-serif; col=
+or: rgb(68, 68, 68); font-size: 1.3em; font-weight: normal; margin: 5px 0px=
+ 0px; padding: 0px; }
+
+div.sphinxsidebar p { color: rgb(68, 68, 68); }
+
+div.sphinxsidebar p.topless { margin: 5px 10px 10px; }
+
+div.sphinxsidebar ul { margin: 10px; padding: 0px; color: rgb(68, 68, 68); =
+}
+
+div.sphinxsidebar a { color: rgb(68, 68, 68); }
+
+div.sphinxsidebar input { border: 1px solid rgb(68, 68, 68); font-family: s=
+ans-serif; font-size: 1em; }
+
+div#sidebarbutton { background-color: rgb(60, 110, 131); }
+
+a { color: rgb(0, 144, 192); text-decoration: none; }
+
+a:visited { color: rgb(0, 96, 143); text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h=
+6 { font-family: "Lucida Grande", Arial, sans-serif; background-color: whit=
+e; font-weight: normal; color: rgb(26, 26, 26); border-bottom: 1px solid rg=
+b(204, 204, 204); margin: 20px -20px 10px; padding: 3px 0px 3px 10px; }
+
+div.body h1 { margin-top: 0px; font-size: 200%; }
+
+div.body h2 { font-size: 160%; }
+
+div.body h3 { font-size: 140%; }
+
+div.body h4 { font-size: 120%; }
+
+div.body h5 { font-size: 110%; }
+
+div.body h6 { font-size: 100%; }
+
+a.headerlink { color: rgb(170, 170, 170); font-size: 0.8em; padding: 0px 4p=
+x; text-decoration: none; }
+
+a.headerlink:hover { background-color: rgb(170, 170, 170); color: white; }
+
+div.body p, div.body dd, div.body li, div.body blockquote { text-align: jus=
+tify; line-height: 130%; }
+
+div.admonition p.admonition-title + p { display: inline; }
+
+div.admonition p { margin-bottom: 5px; }
+
+div.admonition pre { margin-bottom: 5px; }
+
+div.admonition ul, div.admonition ol { margin-bottom: 5px; }
+
+div.note { background-color: rgb(238, 238, 238); border: 1px solid rgb(204,=
+ 204, 204); }
+
+div.seealso { background-color: rgb(255, 255, 204); border: 1px solid rgb(2=
+55, 255, 102); }
+
+div.topic { background-color: rgb(238, 238, 238); }
+
+div.warning { background-color: rgb(255, 228, 228); border: 1px solid rgb(2=
+55, 102, 102); }
+
+p.admonition-title { display: inline; }
+
+p.admonition-title::after { content: ":"; }
+
+pre { padding: 5px; background-color: rgb(238, 255, 204); color: rgb(51, 51=
+, 51); line-height: 120%; border-top: 1px solid rgb(170, 204, 153); border-=
+bottom: 1px solid rgb(170, 204, 153); border-image: initial; border-left: n=
+one; border-right: none; }
+
+code { background-color: rgb(236, 240, 243); padding: 0px 1px; font-size: 0=
+.95em; }
+
+th, dl.field-list > dt { background-color: rgb(238, 221, 238); }
+
+.warning code { background: rgb(239, 194, 194); }
+
+.note code { background: rgb(214, 214, 214); }
+
+.viewcode-back { font-family: "Lucida Grande", Arial, sans-serif; }
+
+div.viewcode-block:target { background-color: rgb(244, 222, 191); border-to=
+p: 1px solid rgb(170, 204, 153); border-bottom: 1px solid rgb(170, 204, 153=
+); }
+
+div.code-block-caption { color: rgb(239, 239, 239); background-color: rgb(2=
+8, 78, 99); }
+------MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/basic.css
+
+@charset "utf-8";
+
+div.clearer { clear: both; }
+
+div.section::after { display: block; content: ""; clear: left; }
+
+div.related { width: 100%; font-size: 90%; }
+
+div.related h3 { display: none; }
+
+div.related ul { margin: 0px; padding: 0px 0px 0px 10px; list-style: none; =
+}
+
+div.related li { display: inline; }
+
+div.related li.right { float: right; margin-right: 5px; }
+
+div.sphinxsidebarwrapper { padding: 10px 5px 0px 10px; }
+
+div.sphinxsidebar { float: left; width: 230px; margin-left: -100%; font-siz=
+e: 90%; overflow-wrap: break-word; }
+
+div.sphinxsidebar ul { list-style: none; }
+
+div.sphinxsidebar ul ul, div.sphinxsidebar ul.want-points { margin-left: 20=
+px; list-style: square; }
+
+div.sphinxsidebar ul ul { margin-top: 0px; margin-bottom: 0px; }
+
+div.sphinxsidebar form { margin-top: 10px; }
+
+div.sphinxsidebar input { border: 1px solid rgb(152, 219, 204); font-family=
+: sans-serif; font-size: 1em; }
+
+div.sphinxsidebar #searchbox form.search { overflow: hidden; }
+
+div.sphinxsidebar #searchbox input[type=3D"text"] { float: left; width: 80%=
+; padding: 0.25em; box-sizing: border-box; }
+
+div.sphinxsidebar #searchbox input[type=3D"submit"] { float: left; width: 2=
+0%; border-left: none; padding: 0.25em; box-sizing: border-box; }
+
+img { border: 0px; max-width: 100%; }
+
+ul.search { margin: 10px 0px 0px 20px; padding: 0px; }
+
+ul.search li { padding: 5px 0px 5px 20px; background-image: url("file.png")=
+; background-repeat: no-repeat; background-position: 0px 7px; }
+
+ul.search li a { font-weight: bold; }
+
+ul.search li p.context { color: rgb(136, 136, 136); margin: 2px 0px 0px 30p=
+x; text-align: left; }
+
+ul.keywordmatches li.goodmatch a { font-weight: bold; }
+
+table.contentstable { width: 90%; margin-left: auto; margin-right: auto; }
+
+table.contentstable p.biglink { line-height: 150%; }
+
+a.biglink { font-size: 1.3em; }
+
+span.linkdescr { font-style: italic; padding-top: 5px; font-size: 90%; }
+
+table.indextable { width: 100%; }
+
+table.indextable td { text-align: left; vertical-align: top; }
+
+table.indextable ul { margin-top: 0px; margin-bottom: 0px; list-style-type:=
+ none; }
+
+table.indextable > tbody > tr > td > ul { padding-left: 0em; }
+
+table.indextable tr.pcap { height: 10px; }
+
+table.indextable tr.cap { margin-top: 10px; background-color: rgb(242, 242,=
+ 242); }
+
+img.toggler { margin-right: 3px; margin-top: 3px; cursor: pointer; }
+
+div.modindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+div.genindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+table.modindextable td { padding: 2px; border-collapse: collapse; }
+
+div.body { min-width: 450px; max-width: 800px; }
+
+div.body p, div.body dd, div.body li, div.body blockquote { hyphens: auto; =
+}
+
+a.headerlink { visibility: hidden; }
+
+a.brackets::before, span.brackets > a::before { content: "["; }
+
+a.brackets::after, span.brackets > a::after { content: "]"; }
+
+h1:hover > a.headerlink, h2:hover > a.headerlink, h3:hover > a.headerlink, =
+h4:hover > a.headerlink, h5:hover > a.headerlink, h6:hover > a.headerlink, =
+dt:hover > a.headerlink, caption:hover > a.headerlink, p.caption:hover > a.=
+headerlink, div.code-block-caption:hover > a.headerlink { visibility: visib=
+le; }
+
+div.body p.caption { text-align: inherit; }
+
+div.body td { text-align: left; }
+
+.first { margin-top: 0px !important; }
+
+p.rubric { margin-top: 30px; font-weight: bold; }
+
+img.align-left, figure.align-left, .figure.align-left, object.align-left { =
+clear: left; float: left; margin-right: 1em; }
+
+img.align-right, figure.align-right, .figure.align-right, object.align-righ=
+t { clear: right; float: right; margin-left: 1em; }
+
+img.align-center, figure.align-center, .figure.align-center, object.align-c=
+enter { display: block; margin-left: auto; margin-right: auto; }
+
+img.align-default, figure.align-default, .figure.align-default { display: b=
+lock; margin-left: auto; margin-right: auto; }
+
+.align-left { text-align: left; }
+
+.align-center { text-align: center; }
+
+.align-default { text-align: center; }
+
+.align-right { text-align: right; }
+
+div.sidebar, aside.sidebar { margin: 0px 0px 0.5em 1em; border: 1px solid r=
+gb(221, 221, 187); padding: 7px; background-color: rgb(255, 255, 238); widt=
+h: 40%; float: right; clear: right; overflow-x: auto; }
+
+p.sidebar-title { font-weight: bold; }
+
+div.admonition, div.topic, blockquote { clear: left; }
+
+div.topic { border: 1px solid rgb(204, 204, 204); padding: 7px; margin: 10p=
+x 0px; }
+
+p.topic-title { font-size: 1.1em; font-weight: bold; margin-top: 10px; }
+
+div.admonition { margin-top: 10px; margin-bottom: 10px; padding: 7px; }
+
+div.admonition dt { font-weight: bold; }
+
+p.admonition-title { margin: 0px 10px 5px 0px; font-weight: bold; }
+
+div.body p.centered { text-align: center; margin-top: 25px; }
+
+div.sidebar > :last-child, aside.sidebar > :last-child, div.topic > :last-c=
+hild, div.admonition > :last-child { margin-bottom: 0px; }
+
+div.sidebar::after, aside.sidebar::after, div.topic::after, div.admonition:=
+:after, blockquote::after { display: block; content: ""; clear: both; }
+
+table.docutils { margin-top: 10px; margin-bottom: 10px; border: 0px; border=
+-collapse: collapse; }
+
+table.align-center { margin-left: auto; margin-right: auto; }
+
+table.align-default { margin-left: auto; margin-right: auto; }
+
+table caption span.caption-number { font-style: italic; }
+
+table caption span.caption-text { }
+
+table.docutils td, table.docutils th { padding: 1px 8px 1px 5px; border-wid=
+th: 0px 0px 1px; border-top-style: initial; border-top-color: initial; bord=
+er-left-style: initial; border-left-color: initial; border-right-style: ini=
+tial; border-right-color: initial; border-bottom-style: solid; border-botto=
+m-color: rgb(170, 170, 170); }
+
+table.footnote td, table.footnote th { border: 0px !important; }
+
+th { text-align: left; padding-right: 5px; }
+
+table.citation { border-left: 1px solid gray; margin-left: 1px; }
+
+table.citation td { border-bottom: none; }
+
+th > :first-child, td > :first-child { margin-top: 0px; }
+
+th > :last-child, td > :last-child { margin-bottom: 0px; }
+
+div.figure, figure { margin: 0.5em; padding: 0.5em; }
+
+div.figure p.caption, figcaption { padding: 0.3em; }
+
+div.figure p.caption span.caption-number, figcaption span.caption-number { =
+font-style: italic; }
+
+div.figure p.caption span.caption-text, figcaption span.caption-text { }
+
+table.field-list td, table.field-list th { border: 0px !important; }
+
+.field-list ul { margin: 0px; padding-left: 1em; }
+
+.field-list p { margin: 0px; }
+
+.field-name { hyphens: manual; }
+
+table.hlist { margin: 1em 0px; }
+
+table.hlist td { vertical-align: top; }
+
+.sig { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sa=
+ns Mono", monospace; }
+
+.sig-name, code.descname { background-color: transparent; font-weight: bold=
+; }
+
+.sig-name { font-size: 1.1em; }
+
+code.descname { font-size: 1.2em; }
+
+.sig-prename, code.descclassname { background-color: transparent; }
+
+.optional { font-size: 1.3em; }
+
+.sig-paren { font-size: larger; }
+
+.sig-param.n { font-style: italic; }
+
+.sig-inline.c-texpr, .sig-inline.cpp-texpr { font-family: unset; }
+
+.sig.c .k, .sig.c .kt, .sig.cpp .k, .sig.cpp .kt { color: rgb(0, 51, 179); =
+}
+
+.sig.c .m, .sig.cpp .m { color: rgb(23, 80, 235); }
+
+.sig.c .s, .sig.c .sc, .sig.cpp .s, .sig.cpp .sc { color: rgb(6, 125, 23); =
+}
+
+ol.arabic { list-style: decimal; }
+
+ol.loweralpha { list-style: lower-alpha; }
+
+ol.upperalpha { list-style: upper-alpha; }
+
+ol.lowerroman { list-style: lower-roman; }
+
+ol.upperroman { list-style: upper-roman; }
+
+:not(li) > ol > li:first-child > :first-child, :not(li) > ul > li:first-chi=
+ld > :first-child { margin-top: 0px; }
+
+:not(li) > ol > li:last-child > :last-child, :not(li) > ul > li:last-child =
+> :last-child { margin-bottom: 0px; }
+
+ol.simple ol p, ol.simple ul p, ul.simple ol p, ul.simple ul p { margin-top=
+: 0px; }
+
+ol.simple > li:not(:first-child) > p, ul.simple > li:not(:first-child) > p =
+{ margin-top: 0px; }
+
+ol.simple p, ul.simple p { margin-bottom: 0px; }
+
+dl.footnote > dt, dl.citation > dt { float: left; margin-right: 0.5em; }
+
+dl.footnote > dd, dl.citation > dd { margin-bottom: 0em; }
+
+dl.footnote > dd::after, dl.citation > dd::after { content: ""; clear: both=
+; }
+
+dl.field-list { display: grid; grid-template-columns: fit-content(30%) auto=
+; }
+
+dl.field-list > dt { font-weight: bold; word-break: break-word; padding-lef=
+t: 0.5em; padding-right: 5px; }
+
+dl.field-list > dt::after { content: ":"; }
+
+dl.field-list > dd { padding-left: 0.5em; margin-top: 0em; margin-left: 0em=
+; margin-bottom: 0em; }
+
+dl { margin-bottom: 15px; }
+
+dd > :first-child { margin-top: 0px; }
+
+dd ul, dd table { margin-bottom: 10px; }
+
+dd { margin-top: 3px; margin-bottom: 10px; margin-left: 30px; }
+
+dl > dd:last-child, dl > dd:last-child > :last-child { margin-bottom: 0px; =
+}
+
+dt:target, span.highlighted { background-color: rgb(251, 229, 78); }
+
+rect.highlighted { fill: rgb(251, 229, 78); }
+
+dl.glossary dt { font-weight: bold; font-size: 1.1em; }
+
+.versionmodified { font-style: italic; }
+
+.system-message { background-color: rgb(255, 221, 170); padding: 5px; borde=
+r: 3px solid red; }
+
+.footnote:target { background-color: rgb(255, 255, 170); }
+
+.line-block { display: block; margin-top: 1em; margin-bottom: 1em; }
+
+.line-block .line-block { margin-top: 0px; margin-bottom: 0px; margin-left:=
+ 1.5em; }
+
+.guilabel, .menuselection { font-family: sans-serif; }
+
+.accelerator { text-decoration: underline; }
+
+.classifier { font-style: oblique; }
+
+.classifier::before { font-style: normal; margin: 0px 0.5em; content: ":"; =
+display: inline-block; }
+
+abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+
+pre { overflow: auto hidden; }
+
+pre, div[class*=3D"highlight-"] { clear: both; }
+
+span.pre { hyphens: none; white-space: nowrap; }
+
+div[class*=3D"highlight-"] { margin: 1em 0px; }
+
+td.linenos pre { border: 0px; background-color: transparent; color: rgb(170=
+, 170, 170); }
+
+table.highlighttable { display: block; }
+
+table.highlighttable tbody { display: block; }
+
+table.highlighttable tr { display: flex; }
+
+table.highlighttable td { margin: 0px; padding: 0px; }
+
+table.highlighttable td.linenos { padding-right: 0.5em; }
+
+table.highlighttable td.code { flex: 1 1 0%; overflow: hidden; }
+
+.highlight .hll { display: block; }
+
+div.highlight pre, table.highlighttable pre { margin: 0px; }
+
+div.code-block-caption + div { margin-top: 0px; }
+
+div.code-block-caption { margin-top: 1em; padding: 2px 5px; font-size: smal=
+l; }
+
+div.code-block-caption code { background-color: transparent; }
+
+table.highlighttable td.linenos, span.linenos, div.highlight span.gp { user=
+-select: none; }
+
+div.code-block-caption span.caption-number { padding: 0.1em 0.3em; font-sty=
+le: italic; }
+
+div.code-block-caption span.caption-text { }
+
+div.literal-block-wrapper { margin: 1em 0px; }
+
+code.xref, a code { background-color: transparent; font-weight: bold; }
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { background-color: tr=
+ansparent; }
+
+.viewcode-link { float: right; }
+
+.viewcode-back { float: right; font-family: sans-serif; }
+
+div.viewcode-block:target { margin: -1px -10px; padding: 0px 10px; }
+
+img.math { vertical-align: middle; }
+
+div.body div.math p { text-align: center; }
+
+span.eqno { float: right; }
+
+span.eqno a.headerlink { position: absolute; z-index: 1; }
+
+div.math:hover a.headerlink { visibility: visible; }
+
+@media print {
+  div.document, div.documentwrapper, div.bodywrapper { width: 100%; margin:=
+ 0px !important; }
+  div.sphinxsidebar, div.related, div.footer, #top-link { display: none; }
+}
+------MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/py.svg
+
+<svg width=3D"16" height=3D"16" viewBox=3D"0 0 16 16" fill=3D"none" xmlns=
+=3D"http://www.w3.org/2000/svg">
+<path d=3D"M7.90472 0.00013087C7.24498 0.00316295 6.61493 0.0588153 6.06056=
+ 0.15584C4.42744 0.441207 4.13093 1.0385 4.13093 2.14002V3.59479H7.99018V4.=
+07971H4.13093H2.68259C1.56098 4.07971 0.578874 4.7465 0.271682 6.01495C-0.0=
+826595 7.4689 -0.0983765 8.37618 0.271682 9.89434C0.546011 11.0244 1.20115 =
+11.8296 2.32275 11.8296H3.64965V10.0856C3.64965 8.82574 4.75178 7.71441 6.0=
+6056 7.71441H9.91531C10.9883 7.71441 11.8449 6.84056 11.8449 5.77472V2.1400=
+2C11.8449 1.10556 10.9626 0.328486 9.91531 0.15584C9.25235 0.046687 8.56447=
+ -0.00290121 7.90472 0.00013087ZM5.81767 1.17017C6.2163 1.17017 6.54184 1.4=
+9742 6.54184 1.89978C6.54184 2.30072 6.2163 2.62494 5.81767 2.62494C5.41761=
+ 2.62494 5.0935 2.30072 5.0935 1.89978C5.0935 1.49742 5.41761 1.17017 5.817=
+67 1.17017Z" fill=3D"url(#paint0_linear)"/>
+<path d=3D"M12.3262 4.07971V5.77472C12.3262 7.08883 11.1998 8.19488 9.9153 =
+8.19488H6.06055C5.00466 8.19488 4.13092 9.0887 4.13092 10.1346V13.7693C4.13=
+092 14.8037 5.04038 15.4122 6.06055 15.709C7.28217 16.0642 8.45364 16.1285 =
+9.9153 15.709C10.8869 15.4307 11.8449 14.8708 11.8449 13.7693V12.3145H7.990=
+17V11.8296H11.8449H13.7746C14.8962 11.8296 15.3141 11.0558 15.7042 9.89434C=
+16.1071 8.69865 16.09 7.5488 15.7042 6.01495C15.427 4.91058 14.8976 4.07971=
+ 13.7746 4.07971H12.3262ZM10.1582 13.2843C10.5583 13.2843 10.8824 13.6086 1=
+0.8824 14.0095C10.8824 14.4119 10.5583 14.7391 10.1582 14.7391C9.75955 14.7=
+391 9.43402 14.4119 9.43402 14.0095C9.43402 13.6086 9.75955 13.2843 10.1582=
+ 13.2843Z" fill=3D"url(#paint1_linear)"/>
+<defs>
+<linearGradient id=3D"paint0_linear" x1=3D"1.25961e-08" y1=3D"1.08223e-08" =
+x2=3D"8.81664" y2=3D"7.59597" gradientUnits=3D"userSpaceOnUse">
+<stop stop-color=3D"#5A9FD4"/>
+<stop offset=3D"1" stop-color=3D"#306998"/>
+</linearGradient>
+<linearGradient id=3D"paint1_linear" x1=3D"10.0654" y1=3D"13.8872" x2=3D"6.=
+91912" y2=3D"9.42957" gradientUnits=3D"userSpaceOnUse">
+<stop stop-color=3D"#FFD43B"/>
+<stop offset=3D"1" stop-color=3D"#FFE873"/>
+</linearGradient>
+</defs>
+</svg>=0A
+------MultipartBoundary--PwVM1DvEgXu0q1GaUdK3trve5NyuBvEN7jl1uZKve0------
